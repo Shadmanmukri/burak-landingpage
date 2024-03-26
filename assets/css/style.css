@@ -785,7 +785,7 @@ padding: 50px 0px;
 }
 .burak__applications-cards{
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
   gap: 30px;
 }
 .burak__applications-card{
@@ -1937,6 +1937,11 @@ nav{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
     gap: 5px;
+}
+.burak__applications-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 30px;
 }
   .burak__industries-cards {
     display: grid;
