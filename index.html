@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav class="burak-container m-t-20 m-b-20">
+        <img src="/assets/images/nav-logo.png" alt="">
+        <div class="burak__nav-info">
+            <p class="p">Questions? </p>
+            <div class="phone">
+                <img src="/assets/images/phone.png" />
+                <p class="p"> Call: +91 9773141989 / +91 8655587403</p>
+            </div>
+            <div class="phone">
+                <img src="/assets/images/email.png" alt="">
+                <p class="p">Email: sales@burak.in</p>
+            </div>
+        </div>
+
+    </nav>
+
+    <section class="burak__banner p-b-50">
+      
+
+        <div class="sideQuoteForm animated-slide-in" onmouseleave="hideForm()">
+            <div class="form-relative">
+            <span class="get-quote-modal" onmouseover="showForm()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12" fill="none">
+                    <path d="M9.71313 12L19.4263 2.28687L17.1426 0L9.71313 7.43434L2.28525 0L0 2.28525L9.71313 12Z"
+                    fill="var(--white)" transform="rotate(180 9.71313 6)" />
+                </svg>
+                <p>Get Quote</p> 
+            </span>
+              <form class="" action="{% url 'burakapp:message' %}" method="post" id="sideQuoteForm"
+              onsubmit="handleFormSubmit(event, 'sideQuoteForm')">
+              <p>Get Quote</p>
+                  <input name="name" type="text" placeholder="Name" required maxlength="50"
+                      oninput="this.value=this.value.replace(/[^a-zA-Z\s]/g,'')" onblur="validateName('sideQuoteForm')">
+                  <span id="nameError" class="error-message"></span>
+          
+                  <input name="email" type="email" placeholder="Email" required onblur="validateEmail('sideQuoteForm')">
+                  <span id="emailError" class="error-message"></span>
+          
+                  <input name="phone" type="tel" placeholder="Phone" required name="phone" maxlength="12"
+                      oninput="this.value=this.value.replace(/[^0-9]/g,'')" onblur="validatePhone('sideQuoteForm')">
+                  <span id="phoneError" class="error-message"></span>
+          
+                  <button type="submit" class="submit-btn">Submit</button>
+              </form>
+            </div>
+          </div>
+          
+
+        <div class="burak__banner-content burak-container p-t-50">
+
+            <div class="burak__banner-address white-text">
+                <h1 class="h1">Compressed Air Flow Measurement using Thermal Mass Flow Meter </h1><span
+                    class="burak__banner-span">Maximizing Efficiency in Air Compression</span>
+            </div>
+
+            <form action="" class="burak__footer-form">
+                <h2 class="h2">Contact Us Today</h2>
+                <input type="text" class="input-1 m-t-20" placeholder="Name">
+                <input type="text" placeholder="Email" class="input-2">
+                <input type="text" placeholder="Phone" class="input-3">
+                <textarea name="message" class="message" id="" cols="30" rows="5" placeholder="Message"></textarea>
+                <a href="" class="burak__footer-form-btn">Submit</a>
+            </form>
+        </div>
+
+    </section>
+
+    <section class="burak__landingpage-desc burak-container m-t-50">
+        <h2 class="h2 accent-text">Description</h2>
+        <p class="p m-t-20">A thermal mass flow meter is a specialized instrument used to measure the flow rate of
+            gases. It operates by heating a sensor in the fluid's path and then calculates the cooling effect as the
+            fluid flows past it. This temperature change allows the meter to determine the mass or volumetric flow rate
+            accurately. Thermal mass flow meters are prized for their accuracy and low-pressure drop, making them
+            essential in various industries, including natural gas distribution, Inert Gas measurement, and HVAC
+            systems.</p>
+    </section>
+
+    <section class="burak__range-thermal burak-container m-t-50">
+        <h2 class="h2">Range of Thermal Mass Flow Meter</h2>
+        <div class="burak__range-thermal-cards m-t-20">
+            <div class="burak__range-thermal-card ">
+                <img src="/assets/images/thermal-1.png" alt="">
+                <div class="burak__range-thermal-card-content">
+                    <h5 class="h6">BT-3000-G</h5>
+                    <p class="p">Inline Thermal Mass Flow Meter</p>
+                    <ul>
+                        <li>Direct Mass Flow Measurement</li>
+                        <li>Air, Nitrogen, Oxygen, Natural Gas</li>
+                        <li>MEMS Sensor for fast Response</li>
+                        <li>Pipe Size: 1/2” to 4”</li>
+                        <li>4-20mA 3-wire, RS 485 Modbus</li>
+                    </ul>
+                </div>
+
+
+            </div>
+            <div class="burak__range-thermal-card ">
+                <img src="/assets/images/thermal-2.png" alt="">
+                <div class="burak__range-thermal-card-content">
+                    <h5 class="h6">BT-3000-G</h5>
+                    <p class="p">Inline Thermal Mass Flow Meter</p>
+                    <ul>
+                        <li>Direct Mass Flow Measurement</li>
+                        <li>Air, Nitrogen, Oxygen, Natural Gas</li>
+                        <li>MEMS Sensor for fast Response</li>
+                        <li>Pipe Size: 1/2” to 4”</li>
+                        <li>4-20mA 3-wire, RS 485 Modbus</li>
+                    </ul>
+                </div>
+
+
+            </div>
+            <div class="burak__range-thermal-card ">
+                <img src="/assets/images/thermal-3.png" alt="">
+                <div class="burak__range-thermal-card-content">
+                    <h5 class="h6">BT-3000-G</h5>
+                    <p class="p">Inline Thermal Mass Flow Meter</p>
+                    <ul>
+                        <li>Direct Mass Flow Measurement</li>
+                        <li>Air, Nitrogen, Oxygen, Natural Gas</li>
+                        <li>MEMS Sensor for fast Response</li>
+                        <li>Pipe Size: 1/2” to 4”</li>
+                        <li>4-20mA 3-wire, RS 485 Modbus</li>
+                    </ul>
+                </div>
+
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <section class="burak__article p-t-50 p-b-50 m-t-50">
+        <div class="burak__article-content burak-container">
+            <div class="burak__article-text ">
+                <p class="p">Article</p>
+                <div class="burak__article-profile">
+                    <img src="/assets/images/saeed-sir.png" alt="">
+                    <div class="burak__articleprofile-content">
+                        <h6 class="h6">Lanjekar Saeed</h6>
+                        <p class="p">Entrepreneur, IT, Iot, Product Enthusiast</p>
+                    </div>
+                </div>
+                <h2 class="h2 accent-text">Air is free, but compressed air is not..!</h2>
+                <p class="p">Compressed air has the wide range of applications across Industrial segments. Compressed
+                    air is considered to be the “fourth utility” after water, natural gas, and electricity. When
+                    compared to the cost per delivered unit of energy compressed air is costly other than three. There
+                    are six basic aspects of efficient compressed dry air system total demand, system storage,
+                    operational supply, output air quality, on-demand distribution, and overall management. All six
+                    elements need to work together for the system to reach its extreme efficiency.</p>
+                <p class="p">Accurately tracking the use of compressed air is a must. By knowing exact air production or
+                    consumption rate using PCD Thermal dispersion mass flow meters we can optimize complete systems,
+                    assure stable quality and also reduce energy losses.</p>
+            </div>
+            <img src="/assets/images/article.png" class="article__img" alt="">
+        </div>
+    </section>
+
+    <section class="burak__applications burak-container m-t-50">
+        <h2 class="h2">Other Application Areas</h2>
+        <div class="burak__applications-cards m-t-20">
+            <div class="burak__applications-card">
+                <img src="assets/images/app1.png" alt="">
+                <p class="p">Compressed Air Flow
+                    Measurement</p>
+
+            </div>
+            <div class="burak__applications-card">
+                <img src="assets/images/app2.png" alt="">
+                <p class="p">Methane</p>
+
+            </div>
+            <div class="burak__applications-card">
+                <img src="assets/images/app3.png" alt="">
+                <p class="p">Bio Gas</p>
+
+            </div>
+            <div class="burak__applications-card">
+                <img src="assets/images/app4.png" alt="">
+                <p class="p">Nitrogen Gas</p>
+
+            </div>
+            <div class="burak__applications-card">
+                <img src="assets/images/app5.png" alt="">
+                <p class="p">Carbon Dioxide</p>
+
+            </div>
+            <div class="burak__applications-card">
+                <img src="assets/images/app6.png" alt="">
+                <p class="p">LPG Gas</p>
+
+            </div>
+            <div class="burak__applications-card">
+                <img src="assets/images/app7.png" alt="">
+                <p class="p">Argon Gas</p>
+
+            </div>
+            <div class="burak__applications-card">
+                <img src="assets/images/app8.png" alt="">
+                <p class="p">Hydrogen Gas</p>
+
+            </div>
+            <div class="burak__applications-card">
+                <img src="assets/images/app9.png" alt="">
+                <p class="p">landfill gas</p>
+
+            </div>
+            <div class="burak__applications-card">
+                <img src="assets/images/app10.png" alt="">
+                <p class="p">Propane Gas</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="burak__industries m-t-50 p-t-50 p-b-50 ">
+        <div class="burak__industries-content burak-container">
+            <h2 class="h2">Industries we serve</h2>
+            <div class="burak__industries-cards m-t-20">
+                <div class="burak__industries-card-img">
+                    <img src="/assets/images/ind1.png" alt="">
+                    <p class="p">Oil & Gas</p>
+                </div>
+                <div class="burak__industries-card-img">
+                    <img src="/assets/images/ind2.png" alt="">
+                    <p class="p">Textile</p>
+                </div>
+                <div class="burak__industries-card-img">
+                    <img src="/assets/images/ind3.png" alt="">
+                    <p class="p">Chemical</p>
+                </div>
+                <div class="burak__industries-card-img">
+                    <img src="/assets/images/ind4.png" alt="">
+                    <p class="p">Pharma</p>
+                </div>
+                <div class="burak__industries-card-img">
+                    <img src="/assets/images/ind5.png" alt="">
+                    <p class="p">Automotive</p>
+                </div>
+                <div class="burak__industries-card-img">
+                    <img src="/assets/images/ind6.png" alt="">
+                    <p class="p">PowerPlant</p>
+                </div>
+                <div class="burak__industries-card-img">
+                    <img src="/assets/images/ind7.png" alt="">
+                    <p class="p">Waste Water</p>
+                </div>
+                <div class="burak__industries-card-img">
+                    <img src="/assets/images/ind8.png" alt="">
+                    <p class="p">Food Process</p>
+                </div>
+                <div class="burak__industries-card-img">
+                    <img src="/assets/images/ind9.png" alt="">
+                    <p class="p">Pulp & Paper</p>
+                </div>
+                <div class="burak__industries-card-img">
+                    <img src="/assets/images/ind10.png" alt="">
+                    <p class="p">Steel Industry</p>
+                </div>
+                <div class="burak__industries-card-img">
+                    <img src="/assets/images/ind11.png" alt="">
+                    <p class="p">Marine</p>
+                </div>
+                <div class="burak__industries-card-img">
+                    <img src="/assets/images/ind12.png" alt="">
+                    <p class="p">Forging</p>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <section class="burak__onsite burak-container m-t-50">
+        <h2 class="h2">On-Site Installations: Gas Flow Meters in Action</h2>
+        <div class="burak__onsite-img-cards m-t-20">
+            <div class="burak__onsite-img-card">
+                <img src="assets/images/on1.png" alt="">
+
+            </div>
+            <div class="burak__onsite-img-card">
+                <img src="assets/images/on2.png" alt="">
+
+            </div>
+            <div class="burak__onsite-img-card">
+                <img src="assets/images/on3.png" alt="">
+
+            </div>
+            <div class="burak__onsite-img-card">
+                <img src="assets/images/on4.png" alt="">
+
+            </div>
+            <div class="burak__onsite-img-card">
+                <img src="assets/images/on5.png" alt="">
+
+            </div>
+            <div class="burak__onsite-img-card">
+                <img src="assets/images/on6.png" alt="">
+
+            </div>
+
+
+
+
+        </div>
+
+    </section>
+
+    <section class="burak__clients m-t-50 p-t-50 p-b-50 ">
+        <div class="burak__brand-clients-content burak-container">
+            <h2 class="h2 h2-fontweight">Trusted by:</h2>
+            <h2 class="h2 accent-text">Some of the well-known Companies</h2>
+            <div class="burak__brand-clients-cards m-t-20">
+                <div class="burak__brand-clients-card-img">
+                    <img src="/assets/images/client1.png" class="client-img" alt="">
+
+                </div>
+                <div class="burak__brand-clients-card-img">
+                    <img src="/assets/images/client2.png" class="client-img" alt="">
+
+                </div>
+                <div class="burak__brand-clients-card-img">
+                    <img src="/assets/images/client3.png" class="client-img" alt="">
+
+                </div>
+                <div class="burak__brand-clients-card-img">
+                    <img src="/assets/images/client4.png" class="client-img" alt="">
+
+                </div>
+                <div class="burak__brand-clients-card-img">
+                    <img src="/assets/images/client5.png" class="client-img" alt="">
+
+                </div>
+                <div class="burak__brand-clients-card-img">
+                    <img src="/assets/images/client6.png" class="client-img" alt="">
+
+                </div>
+                <div class="burak__brand-clients-card-img">
+                    <img src="/assets/images/client7.png" class="client-img" alt="">
+
+                </div>
+                <div class="burak__brand-clients-card-img">
+                    <img src="/assets/images/client8.png" class="client-img" alt="">
+
+                </div>
+                <div class="burak__brand-clients-card-img">
+                    <img src="/assets/images/client9.png" class="client-img" alt="">
+
+                </div>
+                <div class="burak__brand-clients-card-img">
+                    <img src="/assets/images/client10.png" class="client-img" alt="">
+
+                </div>
+                <div class="burak__brand-clients-card-img">
+                    <img src="/assets/images/client11.png" class="client-img" alt="">
+
+                </div>
+                <div class="burak__brand-clients-card-img">
+                    <img src="/assets/images/client12.png" class="client-img" alt="">
+
+                </div>
+                <div class="burak__brand-clients-card-img">
+                    <img src="/assets/images/client13.png" class="client-img" alt="">
+
+                </div>
+                <div class="burak__brand-clients-card-img">
+                    <img src="/assets/images/client14.png" class="client-img" alt="">
+
+                </div>
+                <div class="burak__brand-clients-card-img">
+                    <img src="/assets/images/client15.png" class="client-img" alt="">
+
+                </div>
+                <div class="burak__brand-clients-card-img">
+                    <img src="/assets/images/client16.png" class="client-img" alt="">
+
+                </div>
+                <div class="burak__brand-clients-card-img">
+                    <img src="/assets/images/client17.png" class="client-img" alt="">
+
+                </div>
+                <div class="burak__brand-clients-card-img">
+                    <img src="/assets/images/client18.png" class="client-img" alt="">
+
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <section class="burak__testimonials burak-container m-t-50">
+        <h2 class="h2 accent-text">Client Testimonials</h2>
+        <div class="swiper mySwiper m-t-20">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="burak__testimonial-content m-b-20">
+                        <h2 class="h2 accent-text">Istihaq Mirza</h2>
+                        <p>Operations Manager, AquaFuel Solutions</p>
+                    </div>
+                    <p>Since implementing Burak Metering's gas flow meters, our operations have experienced a remarkable
+                        transformation. The precision and reliability of their meters have significantly improved our
+                        efficiency and accuracy in monitoring gas flow. As the Operations Manager at AquaFuel Solutions,
+                        I can confidently attest to the unparalleled quality and support offered by Burak Metering.</p>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="burak__testimonial-content m-b-20">
+                        <h2 class="h2 accent-text">Istihaq Mirza</h2>
+                        <p>Operations Manager, AquaFuel Solutions</p>
+                    </div>
+                    <p>Since implementing Burak Metering's gas flow meters, our operations have experienced a remarkable
+                        transformation. The precision and reliability of their meters have significantly improved our
+                        efficiency and accuracy in monitoring gas flow. As the Operations Manager at AquaFuel Solutions,
+                        I can confidently attest to the unparalleled quality and support offered by Burak Metering.</p>
+                </div>
+                <div class="swiper-slide">
+                    <div class="burak__testimonial-content m-b-20">
+                        <h2 class="h2 accent-text">Istihaq Mirza</h2>
+                        <p>Operations Manager, AquaFuel Solutions</p>
+                    </div>
+                    <p>Since implementing Burak Metering's gas flow meters, our operations have experienced a remarkable
+                        transformation. The precision and reliability of their meters have significantly improved our
+                        efficiency and accuracy in monitoring gas flow. As the Operations Manager at AquaFuel Solutions,
+                        I can confidently attest to the unparalleled quality and support offered by Burak Metering.</p>
+                </div>
+                <div class="swiper-slide">
+                    <div class="burak__testimonial-content m-b-20">
+                        <h2 class="h2 accent-text">Istihaq Mirza</h2>
+                        <p>Operations Manager, AquaFuel Solutions</p>
+                    </div>
+                    <p>Since implementing Burak Metering's gas flow meters, our operations have experienced a remarkable
+                        transformation. The precision and reliability of their meters have significantly improved our
+                        efficiency and accuracy in monitoring gas flow. As the Operations Manager at AquaFuel Solutions,
+                        I can confidently attest to the unparalleled quality and support offered by Burak Metering.</p>
+                </div>
+                <div class="swiper-slide">
+                    <div class="burak__testimonial-content m-b-20">
+                        <h2 class="h2 accent-text">Istihaq Mirza</h2>
+                        <p>Operations Manager, AquaFuel Solutions</p>
+                    </div>
+                    <p>Since implementing Burak Metering's gas flow meters, our operations have experienced a remarkable
+                        transformation. The precision and reliability of their meters have significantly improved our
+                        efficiency and accuracy in monitoring gas flow. As the Operations Manager at AquaFuel Solutions,
+                        I can confidently attest to the unparalleled quality and support offered by Burak Metering.</p>
+                </div>
+                <div class="swiper-slide">
+                    <div class="burak__testimonial-content m-b-20">
+                        <h2 class="h2 accent-text">Istihaq Mirza</h2>
+                        <p>Operations Manager, AquaFuel Solutions</p>
+                    </div>
+                    <p>Since implementing Burak Metering's gas flow meters, our operations have experienced a remarkable
+                        transformation. The precision and reliability of their meters have significantly improved our
+                        efficiency and accuracy in monitoring gas flow. As the Operations Manager at AquaFuel Solutions,
+                        I can confidently attest to the unparalleled quality and support offered by Burak Metering.</p>
+                </div>
+
+            </div>
+            <div class="swiper-button-next" style="width: 50px; height: 10px;"></div>
+            <div class="swiper-button-prev"></div>
+
+        </div>
+
+    </section>
+
+    <section class="burak__product  m-t-50 p-t-50 p-b-50">
+        <div class="burak__product__content burak-container">
+            <h2 class="h2">Have Specific Product Requirements ?</h2>
+            <form action="" class="burak__product-form ">
+                <input type="text" placeholder="Name"><input type="text" placeholder="Email"><input type="text"
+                    placeholder="Phone"><input type="text" placeholder="Requirement"><input type="text"
+                    placeholder="Place">
+            </form>
+            <a href="#" class="burak__get-quote accent-text">Get Quote</a>
+        </div>
+    </section>
+
+
+    <section class="burak__landingpage-desc burak-container m-t-50">
+        <h2 class="h2">A Little Bit About Us</h2>
+        <p class="p m-t-20 m-b-20">A thermal mass flow meter is a specialized instrument used to measure the flow rate
+            of
+            gases. It operates by heating a sensor in the fluid's path and then calculates the cooling effect as the
+            fluid flows past it. This temperature change allows the meter to determine the mass or volumetric flow rate
+            accurately. Thermal mass flow meters are prized for their accuracy and low-pressure drop, making them
+            essential in various industries, including natural gas distribution, Inert Gas measurement, and HVAC
+            systems.</p>
+        <a href="" class="learn-more">Learn More</a>
+    </section>
+
+    <section class="burak__people-behind m-t-50 p-t-50 p-b-50">
+        <div class="burak__people-behind-grid burak-container">
+            <div class="burak__people-behind-content">
+                <h2 class="h2 accent-text">PEOPLE BEHIND MEASUREMENT</h2>
+                <p class="p">In the realm of Flow Measurement, we cover a spectrum of technologies, from Electromagnetic
+                    and Ultrasonic to Vortex, Thermal Mass, and Turbine Flow Meters. These solutions are meticulously
+                    crafted to leverage state-of-the-art technology, along with inhouse liquid and gas calibration lab
+                    complemented by a suite of calibration and validation services, ensuring the delivery of accurate
+                    and reliable results across various industries.</p>
+
+            </div>
+            <img src="/assets/images/burak-metering.png" class="burak__people-img" alt="">
+        </div>
+
+    </section>
+
+    <section class="burak__leadership burak-container m-t-50 ">
+        <h2 class="h2 accent-text">The Leadership</h2>
+        <div class="burak__leadership-cards m-t-20">
+            <div class="burak__leadership-card ">
+                <img src="/assets/images/saeed.png" alt="">
+                <div class="burak__leadership-card-content">
+                    <h5 class="h6 accent-text">Saeed Lanjekar</h5>
+                    <span>Eng. | Founder | Director | CEO</span>
+                    <p class="p">Visionary Incubator, Innovator, Engineer, Investor, Philanthropist, and a Serial
+                        Entrepreneur Mr. Saeed Lanjekar</p>
+
+                </div>
+
+
+            </div>
+            <div class="burak__leadership-card ">
+                <img src="/assets/images/sajid.png" alt="">
+                <div class="burak__leadership-card-content">
+                    <h5 class="h6 accent-text">Sajid Sayyed</h5>
+                    <span>Eng. | Co-Founder | Director | MD</span>
+                    <p class="p">Visionary Incubator, Innovator, Engineer, Investor, Philanthropist, and a Serial
+                        Entrepreneur Mr. Saeed Lanjekar</p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="burak__technology m-t-50 p-t-50 p-b-50">
+        <div class="burak__technology-grid burak-container">
+            <img src="/assets/images/technology.png" class="burak__technology-img" alt="">
+
+            <div class="burak__technology-content">
+                <h2 class="h2"><span class=" accent-text">Burak’s</span> New Technology and Innovation @ Automation Expo
+                    2023</h2>
+                <p class="p">At Burak Automation Expo, we're bringing together the brightest minds, innovators, and
+                    industry leaders to showcase the latest advancements in automation technology. </p>
+                <p class="p m-t-20">Explore our wide range of flow meters and discover the latest innovations in flow
+                    measurement technology. Whether you're in industrial manufacturing, water management, or any other
+                    field that requires precise flow measurement, we have the solution for you.</p>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section class="burak__gallery">
+        <div class="burak__gallery-img-cards m-t-20">
+            <div class="burak__gallery-img-card">
+                <img src="assets/images/on1.png" alt="">
+
+            </div>
+            <div class="burak__gallery-img-card">
+                <img src="assets/images/on2.png" alt="">
+
+            </div>
+            <div class="burak__gallery-img-card">
+                <img src="assets/images/on3.png" alt="">
+
+            </div>
+            <div class="burak__gallery-img-card">
+                <img src="assets/images/on4.png" alt="">
+
+            </div>
+            <div class="burak__gallery-img-card">
+                <img src="assets/images/on5.png" alt="">
+
+            </div>
+            <div class="burak__gallery-img-card">
+                <img src="assets/images/on6.png" alt="">
+
+            </div>
+            <div class="burak__gallery-img-card">
+                <img src="assets/images/gallery-7.png" alt="">
+
+            </div>
+
+            <div class="burak__gallery-img-card">
+                <img src="assets/images/gallery-8.png" alt="">
+
+            </div>
+
+            <div class="burak__gallery-img-card">
+                <img src="assets/images/gallery-9.png" alt="">
+
+            </div>
+
+            <div class="burak__gallery-img-card">
+                <img src="assets/images/gallery-10.png" alt="">
+
+            </div>
+
+
+
+
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer Start -->
+    <footer class="burak__footer p-b-50">
+        <div class="burak__footer-logo burak-container p-t-50 ">
+            <img src="/assets/images/burak-logo.png" class="p-b-20" alt="">
+            <hr>
+        </div>
+        <div class="burak__footer-content burak-container p-t-50">
+            <div class="burak__footer-address-flex">
+                <div class="burak__footer-address white-text">
+                    <h2 class="h2">SOLUTIONS FOR FLOW MEASUREMENT</h2>
+                    <p class="p">Address: Plot No.17, Survey No 69, Hissa No 2, Sagar Market, Behind Mukesh Hotel,
+                        Shilphata Mumbra Thane 400612</p>
+                    <div class="phone">
+                        <img src="/assets/images/email-footer.png" alt="">
+                        <p class="p">sales@burak.in </p>
+                    </div>
+                    <div class="phone">
+                        <img src="/assets/images/phone-footer.png" alt="">
+                        <p class="p">+91 9773141989 / +91 8655587403</p>
+                    </div>
+
+                </div>
+                <div class="burak__footer-social-icons">
+                    <img src="assets/images/facebook.png" alt="">
+                    <img src="assets/images/twitter.png" alt="">
+                    <img src="assets/images/linkedin.png" alt="">
+                    <img src="assets/images/youtube.png" alt="">
+                    <img src="assets/images/instagram.png" alt="">
+                </div>
+            </div>
+            <form action="" class="burak__footer-form">
+                <h2 class="h2">Contact Us Today</h2>
+                <input type="text" class="input-1 m-t-20" placeholder="Name">
+                <input type="text" placeholder="Email" class="input-2">
+                <input type="text" placeholder="Phone" class="input-3">
+                <textarea name="message" class="message" id="" cols="30" rows="5" placeholder="Message"></textarea>
+                <a href="" class="burak__footer-form-btn">Submit</a>
+            </form>
+        </div>
+
+    </footer>
+    <section class="foot burak-container m-t-20 m-b-20">
+        <h2>© 2023 BURAK METERING PVT. LTD. - All Rights Reserved
+        </h2>
+        <p>Developed by <a class="website-link" href="https://sovorun.com/">Sovorun</a> </p>
+    </section>
+
+    <div id="mySidenav">
+        <a class="contact-shortcut__phone" target="_blank" href="tel:8655587403" id="phone"><span>Phone</span>
+          <img width="38" height="38" src="/assets/images/new-phone.png" class="phone-banner__img" loading="eager" alt="Phone" />
+          
+        </a>
+      
+      
+        <a class="contact-shortcut__whatsapp" target="_blank" href="https://wa.me/9137379625" id="whatsapp"><span>WhatsApp</span>
+          <img width="40" height="40" src="/assets/images//new-whatsapp.png" loading="eager" alt="Whatsapp" />
+          
+        </a>
+      
+        <a class="contact-shortcut__email" target="_blank" href="mailto:sales@asprefab.com" id="modalEmail"><span>Email</span>
+          <img width="35" height="35" src="/assets/images//new-email.png" class="email-banner__img" loading="eager" alt="Email" />
+          
+        </a>
+      </div>
+      
+    <!-- Footer End -->
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        var closeSvg = document.querySelector('.get-quote-modal svg');
+        var form = document.querySelector('.sideQuoteForm');
+        function showForm() {
+            form.classList.add('form-visible');
+            closeSvg.classList.add('rotate');
+        }
+        function hideForm(event) {
+            var targetElement = event.target;
+            if (!form.contains(targetElement) && targetElement !== document.querySelector('.get-quote-modal')) {
+                form.classList.remove('form-visible');
+                closeSvg.classList.remove('rotate');
+            }
+        }
+        document.addEventListener('click', hideForm);
+    </script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var nextButton = document.querySelector('.swiper-button-next');
+            var prevButton = document.querySelector('.swiper-button-prev');
+
+            nextButton.style.width = '50px';
+            nextButton.style.height = '50px';
+
+            prevButton.style.width = '50px';
+            prevButton.style.height = '50px';
+
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 3,
+                spaceBetween: 30,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                breakpoints: {
+                            1280: {
+                                slidesPerView: 3,
+                            },
+                            1023: {
+                                slidesPerView: 3,
+                            },
+                            767: {
+                                slidesPerView: 2,
+                            },
+                            0: {
+                                slidesPerView: 1,
+                            },
+                        },
+            });
+        });
+    </script>
+
+</body>
+
+</html>
