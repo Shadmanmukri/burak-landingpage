@@ -787,8 +787,12 @@ padding: 50px 0px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
   gap: 30px;
+  text-align: center;
 }
 .burak__applications-card{
+  width: 100%;
+}
+.burak__applications-card img{
   width: 100%;
 }
 .burak__applications-card p{
