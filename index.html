@@ -296,27 +296,27 @@
         <h2 class="h2">On-Site Installations: Gas Flow Meters in Action</h2>
         <div class="burak__onsite-img-cards m-t-20">
             <div class="burak__onsite-img-card">
-                <img src="assets/images/on1.png" alt="">
+                <img src="assets/images/onsite-1.png" alt="">
 
             </div>
             <div class="burak__onsite-img-card">
-                <img src="assets/images/on2.png" alt="">
+                <img src="assets/images/onsite-2.png" alt="">
 
             </div>
             <div class="burak__onsite-img-card">
-                <img src="assets/images/on3.png" alt="">
+                <img src="assets/images/onsite-3.png" alt="">
 
             </div>
             <div class="burak__onsite-img-card">
-                <img src="assets/images/on4.png" alt="">
+                <img src="assets/images/onsite-4.png" alt="">
 
             </div>
             <div class="burak__onsite-img-card">
-                <img src="assets/images/on5.png" alt="">
+                <img src="assets/images/onsite-5.png" alt="">
 
             </div>
             <div class="burak__onsite-img-card">
-                <img src="assets/images/on6.png" alt="">
+                <img src="assets/images/onsite-6.png" alt="">
 
             </div>
 
@@ -520,8 +520,8 @@
                     and reliable results across various industries.</p>
 
             </div>
-                <video class="burak__people-img" controls>
-                    <source src="/assets/images/Burak-Video.mp4"  type="video/mp4">
+                <video id="corporate-video" class="burak__people-img" muted playsinline loop>
+                    <source src="" >
                   </video>
         </div>
 
@@ -729,6 +729,16 @@
         }
         document.addEventListener('click', hideForm);
     </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var aVideo = document.getElementById('corporate-video');
+
+        aVideo.src = "/assets/images/Burak-Video.mp4";
+        aVideo.controls = true;
+        aVideo.autoplay = true;
+    });
+</script>
 
     <!-- Initialize Swiper -->
     <script>
