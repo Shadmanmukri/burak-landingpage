@@ -576,8 +576,7 @@ padding: 50px 0px;
   #getQuoteModal#getQuoteModal {
     display: flex;
     align-items: center;
-    background: var(--primary-color);
-    color: var(--quaternary-color);
+    color: var(--secondary);
     font-weight: 500;
   }
 
