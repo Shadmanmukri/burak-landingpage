@@ -785,7 +785,7 @@ padding: 50px 0px;
 }
 .burak__applications-cards{
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 30px;
 }
 .burak__applications-card{
@@ -1802,6 +1802,7 @@ nav{
     color: var(--accent);
 }
 
+
 .burak__banner-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1926,10 +1927,20 @@ nav{
   padding: 20px 10px 30px 10px;
 }
 
+
 }
 @media (min-width: 1440px) and (max-width: 1700px) {
   .article__img {
     width: 50%;
+  }
+  .burak__onsite-img-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 5px;
+}
+  .burak__industries-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(102px, 1fr));
   }
   .burak__gallery-img-cards {
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
