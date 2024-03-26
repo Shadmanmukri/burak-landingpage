@@ -819,12 +819,12 @@ color: var(--secondary);
 .burak__onsite-img-cards{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  gap: 5px;
+  column-gap: 5px;
 }
 .burak__onsite-img-card img{
   width: 100%;
   object-fit: cover;
-  height: 100%;
+  height: 259px;
 }
 .burak__clients{
   background-color: var(--primary);
@@ -1546,6 +1546,11 @@ nav{
   background-color: var(--white);
   padding: 20px 10px 30px 10px;
 }
+.burak__onsite-img-card img {
+  width: 100%;
+  object-fit: cover;
+  height: 200px;
+}
 
 }
 @media (min-width: 768px) and (max-width: 1023px){
@@ -1685,7 +1690,11 @@ nav{
   background-color: var(--white);
   padding: 20px 10px 30px 10px;
 }
-
+.burak__onsite-img-card img {
+  width: 100%;
+  object-fit: cover;
+  height: 200px;
+}
 }
 
 @media (min-width: 1024px) and (max-width: 1279px){
@@ -1823,6 +1832,11 @@ nav{
   background-color: var(--white);
   padding: 20px 10px 30px 10px;
 }
+.burak__onsite-img-card img {
+  width: 100%;
+  object-fit: cover;
+  height: 150px;
+}
 }
 @media (min-width: 1280px) and (max-width: 1439px) {
   .burak__nav-info {
@@ -1955,6 +1969,11 @@ nav{
   background-color: var(--white);
   padding: 20px 10px 30px 10px;
 }
+.burak__onsite-img-card img {
+  width: 100%;
+  object-fit: cover;
+  height: 200px;
+}
 
 
 }
@@ -1992,6 +2011,11 @@ nav{
 }
 .burak__range-thermal-card {
   padding: 10px;
+}
+.burak__onsite-img-card img {
+  width: 100%;
+  object-fit: cover;
+  height: 200px;
 }
 
 }
