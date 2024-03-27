@@ -9,17 +9,14 @@
 }
 
 :root {
-  --h1: clamp(2rem, 1.92rem + 0.4vw, 2.25rem) !important;
-  --h2: clamp(1.75rem, 1.67rem + 0.4vw, 2rem) !important;
+  --h1: clamp(25px, calc(1.5625rem + ((1vw - 3px) * 0.9259)), 40px) !important;
+  --h2: clamp(21px, calc(1.3125rem + ((1vw - 3px) * 0.3086)), 26px) !important;
   --h3: clamp(1.625rem, 1.585rem + 0.2vw, 1.75rem) !important;
   --h4: clamp(1.5rem, 1.46rem + 0.2vw, 1.625rem) !important;
   --h5: clamp(1.375rem, 1.335rem + 0.2vw, 1.5rem) !important;
   --h6: clamp(1.25rem, 1.21rem + 0.2vw, 1.375rem) !important;
-  --p: clamp(
-    0.875rem,
-    calc(0.875rem + ((1vw - 0.1875rem) * 0.1235)),
-    1rem
-  ) !important;
+  --p:  clamp(16px, calc(1rem + ((1vw - 3px) * 0.1235)), 18px) !important;
+  --f:clamp(22px, calc(1.375rem + ((1vw - 3px) * 0.8642)), 36px);
   --accent: #007ff0;
   --primary: #ebf2fe;
   --secondary: #373737;
@@ -48,6 +45,9 @@
 
 .h6 {
   font-size: var(--h6);
+}
+.f{
+  font-size: var(--f);
 }
 
 .p {
@@ -444,8 +444,9 @@ input[type="search"]::-webkit-search-cancel-button {
 /* nav start */
 nav{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  gap: 30px;
 }
 .burak__nav-info{
   display: flex;
@@ -455,7 +456,12 @@ nav{
 .phone{
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 10px;
+  color: var(--white);
+}
+.phone a
+{
+  color: var(--white);
 }
 /* nav end */
 
@@ -466,10 +472,7 @@ nav{
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
 }
-.burak__banner-span{
-  font-weight: 400;
-  font-size: 36px;
-}
+
 
 .burak__banner-address h2{
 padding: 50px 0px;
@@ -593,13 +596,19 @@ padding: 50px 0px;
     gap: 5px;
     width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: center;
     border-radius: 0;
     align-items: center;
     border: 0 5px solid var(--primary-color);
     box-shadow: none;
   }
+  .email-banner__img {
+    margin-left: 0px;
+}
+.phone-banner__img {
+  margin-left: 0px;
+}
 
   .hero-slide-form-container {
     grid-template-columns: 1fr;
@@ -1132,13 +1141,16 @@ nav{
 .burak__banner-content {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 55px;
+  gap: 20px;
   align-items: center;
 }
 .burak__footer-form {
   display: grid;
   grid-template-columns: 1fr;
   gap: 5px;
+}
+.swiper-slide {
+padding: 10px;
 }
 .input-2{
   grid-column: 1/3;
@@ -1155,7 +1167,7 @@ nav{
 }
 .burak__range-thermal-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
   gap: 20px;
 }
 .article__img {
@@ -1169,7 +1181,7 @@ nav{
 }
 .burak__onsite-img-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
   gap: 5px;
 }
 .burak__product-form {
@@ -1197,8 +1209,24 @@ nav{
 }
 .burak__leadership-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
   gap: 40px;
+}
+#mySidenav a {
+  flex-direction: column-reverse;
+}
+.burak__footer-logo img{
+width: 250px;
+}
+.burak__footer-social-icons a{
+  width: 40px;
+  height: 40px;
+}
+.phone-banner__img {
+  margin-left: 0px;
+}
+.email-banner__img {
+  margin-left: 0px;
 }
 .burak__technology-img{
   width: 100%;
@@ -1222,7 +1250,7 @@ nav{
 .burak__footer-content {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 50px;
+  gap: 70px;
   align-items: center;
 }
 .foot {
@@ -1233,15 +1261,16 @@ nav{
 }
 .burak__industries-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(86px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(72px, 1fr));
   column-gap: 30px;
   row-gap: 40px;
   text-align: center;
 }
 .burak__applications-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   text-align: center;
+  gap: 20px;
 }
 .foot h2, .foot p {
   color: var(--secondary);
@@ -1254,12 +1283,16 @@ nav{
   gap: 27px;
   text-align: center;
 }
+.burak__onsite-img-card img {
+  height: 200px;
+  width: 100%;
+}
 .burak__footer-form {
   background-color: var(--white);
   padding: 20px 10px 30px 10px;
 }
 .burak__applications-card img{
-  width: 100%;
+  width: 120px;
   object-fit: cover;
 }
 }
@@ -1271,6 +1304,7 @@ nav{
     color: var(--accent);
     flex-direction: column;
 }
+
 nav{
   flex-direction: column;
 }
@@ -1298,6 +1332,14 @@ nav{
   border: 1px solid rgb(241, 238, 238);
   padding: 10px;
 }
+.swiper-slide {
+  padding: 10px;
+  }
+  .burak__footer-social-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 .burak__range-thermal-cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -1385,7 +1427,7 @@ nav{
 }
 .burak__applications-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   text-align: center;
 }
 .foot h2, .foot p {
@@ -1442,6 +1484,11 @@ nav{
   border: 1px solid rgb(241, 238, 238);
   padding: 10px;
 }
+.burak__footer-social-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 .burak__range-thermal-cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -1475,6 +1522,9 @@ nav{
 }
 .burak__people-img{
   width: 100%;
+}
+.swiper-slide {
+  padding: 10px;
 }
 .burak__leadership-card {
   display: flex;
@@ -1529,7 +1579,7 @@ nav{
 }
 .burak__applications-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   text-align: center;
 }
 .foot h2, .foot p {
@@ -1545,12 +1595,11 @@ nav{
 }
 .burak__footer-form {
   background-color: var(--white);
-  padding: 20px 10px 30px 10px;
+  padding: 20px 30px 30px 30px;
 }
 .burak__onsite-img-card img {
   width: 100%;
   object-fit: cover;
-  height: 200px;
 }
 
 }
@@ -1562,7 +1611,11 @@ nav{
     color: var(--accent);
     flex-direction: column;
 }
-
+.burak__footer-social-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 .burak__banner-content {
   display: grid;
   grid-template-columns: 1fr;
@@ -1689,7 +1742,7 @@ nav{
 }
 .burak__footer-form {
   background-color: var(--white);
-  padding: 20px 10px 30px 10px;
+  padding: 20px 30px 30px 30px;
 }
 .burak__onsite-img-card img {
   width: 100%;
