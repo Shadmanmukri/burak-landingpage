@@ -17,18 +17,18 @@
 
 <body>
     <nav class="burak-container m-t-20 m-b-20">
-        <img src="/assets/images/nav-logo.png" alt="">
+        <img src="/assets/images/nav-logo.webp" alt="">
         <div class="burak__nav-info">
             <div class="phone">
                 <a class="phone" target="_blank" href="tel:8655587403">
                 
-                <img src="/assets/images/phone.png" />
+                <img src="/assets/images/phone.webp" />
                 <p class="p accent-text"> Call: +91 9773141989 | +91 8655587403</p>
             </a>
             </div>
             <div class="phone">
                 <a class="phone" target="_blank" href="mailto:sales@burak.in">
-                <img src="/assets/images/email.png" alt="">
+                <img src="/assets/images/email.webp" alt="">
                 <p class="p accent-text">Email: sales@burak.in</p></a>
             </div>
         </div>
@@ -38,18 +38,18 @@
     <section class="burak__banner p-b-50">
       
 
-        <div class="sideQuoteForm animated-slide-in" onmouseleave="hideForm()">
+        <div class="sideQuoteForm">
             <div class="form-relative">
-            <span class="get-quote-modal" onmouseover="showForm()">
+            <span class="get-quote-modal" onmouseenter="showForm()">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12" fill="none">
                     <path d="M9.71313 12L19.4263 2.28687L17.1426 0L9.71313 7.43434L2.28525 0L0 2.28525L9.71313 12Z"
                     fill="var(--white)" transform="rotate(180 9.71313 6)" />
                 </svg>
                 <p>Get Quote</p> 
             </span>
-              <form class="" action="{% url 'burakapp:message' %}" method="post" id="sideQuoteForm"
-              onsubmit="handleFormSubmit(event, 'sideQuoteForm')">
-              <p>Get Quote</p>
+              <form action="{% url 'burakapp:message' %}" method="post" id="sideQuoteForm"
+                 onsubmit="handleFormSubmit(event, 'sideQuoteForm')">
+                  <p>Get Quote</p>
                   <input name="name" type="text" placeholder="Name" required maxlength="50"
                       oninput="this.value=this.value.replace(/[^a-zA-Z\s]/g,'')" onblur="validateName('sideQuoteForm')">
                   <span id="nameError" class="error-message"></span>
@@ -60,8 +60,11 @@
                   <input name="phone" type="tel" placeholder="Phone" required name="phone" maxlength="12"
                       oninput="this.value=this.value.replace(/[^0-9]/g,'')" onblur="validatePhone('sideQuoteForm')">
                   <span id="phoneError" class="error-message"></span>
-          
+        
+                  <textarea id="textarea" name="message" placeholder="Message"></textarea>
+                  
                   <button type="submit" class="submit-btn">Submit</button>
+                  
               </form>
             </div>
           </div>
@@ -100,7 +103,7 @@
         <h2 class="h2">Range of Thermal Mass Flow Meter</h2>
         <div class="burak__range-thermal-cards m-t-20">
             <div class="burak__range-thermal-card ">
-                <img src="/assets/images/thermal-1.png" alt="">
+                <img src="/assets/images/thermal-1.webp" alt="">
                 <div class="burak__range-thermal-card-content">
                     <h5 class="h6">BT-3000-G</h5>
                     <p class="p">Inline Thermal Mass Flow Meter</p>
@@ -116,7 +119,7 @@
 
             </div>
             <div class="burak__range-thermal-card ">
-                <img src="/assets/images/thermal-2.png" alt="">
+                <img src="/assets/images/thermal-2.webp" alt="">
                 <div class="burak__range-thermal-card-content">
                     <h5 class="h6">BT-3000-G</h5>
                     <p class="p">Inline Thermal Mass Flow Meter</p>
@@ -132,7 +135,7 @@
 
             </div>
             <div class="burak__range-thermal-card ">
-                <img src="/assets/images/thermal-3.png" alt="">
+                <img src="/assets/images/thermal-3.webp" alt="">
                 <div class="burak__range-thermal-card-content">
                     <h5 class="h6">BT-3000-G</h5>
                     <p class="p">Inline Thermal Mass Flow Meter</p>
@@ -156,13 +159,7 @@
         <div class="burak__article-content burak-container">
             <div class="burak__article-text ">
                 <p class="p">Article</p>
-                <div class="burak__article-profile">
-                    <img src="/assets/images/saeed-sir.png" alt="">
-                    <div class="burak__articleprofile-content">
-                        <h6 class="h6">Lanjekar Saeed</h6>
-                        <p class="p">Entrepreneur, IT, Iot, Product Enthusiast</p>
-                    </div>
-                </div>
+               
                 <h2 class="h2 accent-text">Air is free, but compressed air is not..!</h2>
                 <p class="p">Compressed air has the wide range of applications across Industrial segments. Compressed
                     air is considered to be the “fourth utility” after water, natural gas, and electricity. When
@@ -174,7 +171,7 @@
                     consumption rate using PCD Thermal dispersion mass flow meters we can optimize complete systems,
                     assure stable quality and also reduce energy losses.</p>
             </div>
-            <img src="/assets/images/article.png" class="article__img" alt="">
+            <img src="/assets/images/article.webp" class="article__img" alt="">
         </div>
     </section>
 
@@ -182,53 +179,53 @@
         <h2 class="h2">Other Application Areas</h2>
         <div class="burak__applications-cards m-t-20">
             <div class="burak__applications-card">
-                <img src="assets/images/app1.png" alt="">
+                <img src="assets/images/app1.webp" alt="">
                 <p class="p">Compressed Air Flow
                     Measurement</p>
 
             </div>
             <div class="burak__applications-card">
-                <img src="assets/images/app2.png" alt="">
+                <img src="assets/images/app2.webp" alt="">
                 <p class="p">Methane</p>
 
             </div>
             <div class="burak__applications-card">
-                <img src="assets/images/app3.png" alt="">
+                <img src="assets/images/app3.webp" alt="">
                 <p class="p">Bio Gas</p>
 
             </div>
             <div class="burak__applications-card">
-                <img src="assets/images/app4.png" alt="">
+                <img src="assets/images/app4.webp" alt="">
                 <p class="p">Nitrogen Gas</p>
 
             </div>
             <div class="burak__applications-card">
-                <img src="assets/images/app5.png" alt="">
+                <img src="assets/images/app5.webp" alt="">
                 <p class="p">Carbon Dioxide</p>
 
             </div>
             <div class="burak__applications-card">
-                <img src="assets/images/app6.png" alt="">
+                <img src="assets/images/app6.webp" alt="">
                 <p class="p">LPG Gas</p>
 
             </div>
             <div class="burak__applications-card">
-                <img src="assets/images/app7.png" alt="">
+                <img src="assets/images/app7.webp" alt="">
                 <p class="p">Argon Gas</p>
 
             </div>
             <div class="burak__applications-card">
-                <img src="assets/images/app8.png" alt="">
+                <img src="assets/images/app8.webp" alt="">
                 <p class="p">Hydrogen Gas</p>
 
             </div>
             <div class="burak__applications-card">
-                <img src="assets/images/app9.png" alt="">
+                <img src="assets/images/app9.webp" alt="">
                 <p class="p">landfill gas</p>
 
             </div>
             <div class="burak__applications-card">
-                <img src="assets/images/app10.png" alt="">
+                <img src="assets/images/app10.webp" alt="">
                 <p class="p">Propane Gas</p>
 
             </div>
@@ -242,51 +239,51 @@
             <h2 class="h2">Industries we serve</h2>
             <div class="burak__industries-cards m-t-20">
                 <div class="burak__industries-card-img">
-                    <img src="/assets/images/ind1.png" alt="">
+                    <img src="/assets/images/ind1.webp" alt="">
                     <p class="p">Oil & Gas</p>
                 </div>
                 <div class="burak__industries-card-img">
-                    <img src="/assets/images/ind2.png" alt="">
+                    <img src="/assets/images/ind2.webp" alt="">
                     <p class="p">Textile</p>
                 </div>
                 <div class="burak__industries-card-img">
-                    <img src="/assets/images/ind3.png" alt="">
+                    <img src="/assets/images/ind3.webp" alt="">
                     <p class="p">Chemical</p>
                 </div>
                 <div class="burak__industries-card-img">
-                    <img src="/assets/images/ind4.png" alt="">
+                    <img src="/assets/images/ind4.webp" alt="">
                     <p class="p">Pharma</p>
                 </div>
                 <div class="burak__industries-card-img">
-                    <img src="/assets/images/ind5.png" alt="">
+                    <img src="/assets/images/ind5.webp" alt="">
                     <p class="p">Automotive</p>
                 </div>
                 <div class="burak__industries-card-img">
-                    <img src="/assets/images/ind6.png" alt="">
+                    <img src="/assets/images/ind6.webp" alt="">
                     <p class="p">PowerPlant</p>
                 </div>
                 <div class="burak__industries-card-img">
-                    <img src="/assets/images/ind7.png" alt="">
+                    <img src="/assets/images/ind7.webp" alt="">
                     <p class="p">Waste Water</p>
                 </div>
                 <div class="burak__industries-card-img">
-                    <img src="/assets/images/ind8.png" alt="">
+                    <img src="/assets/images/ind8.webp" alt="">
                     <p class="p">Food Process</p>
                 </div>
                 <div class="burak__industries-card-img">
-                    <img src="/assets/images/ind9.png" alt="">
+                    <img src="/assets/images/ind9.webp" alt="">
                     <p class="p">Pulp & Paper</p>
                 </div>
                 <div class="burak__industries-card-img">
-                    <img src="/assets/images/ind10.png" alt="">
+                    <img src="/assets/images/ind10.webp" alt="">
                     <p class="p">Steel Industry</p>
                 </div>
                 <div class="burak__industries-card-img">
-                    <img src="/assets/images/ind11.png" alt="">
+                    <img src="/assets/images/ind11.webp" alt="">
                     <p class="p">Marine</p>
                 </div>
                 <div class="burak__industries-card-img">
-                    <img src="/assets/images/ind12.png" alt="">
+                    <img src="/assets/images/ind12.webp" alt="">
                     <p class="p">Forging</p>
                 </div>
             </div>
@@ -311,27 +308,27 @@
         <h2 class="h2">On-Site Installations: Gas Flow Meters in Action</h2>
         <div class="burak__onsite-img-cards m-t-20">
             <div class="burak__onsite-img-card">
-                <img src="assets/images/onsite-1.png" alt="">
+                <img src="assets/images/onsite-1.webp" alt="">
 
             </div>
             <div class="burak__onsite-img-card">
-                <img src="assets/images/onsite-2.png" alt="">
+                <img src="assets/images/onsite-2.webp" alt="">
 
             </div>
             <div class="burak__onsite-img-card">
-                <img src="assets/images/onsite-3.png" alt="">
+                <img src="assets/images/onsite-3.webp" alt="">
 
             </div>
             <div class="burak__onsite-img-card">
-                <img src="assets/images/onsite-4.png" alt="">
+                <img src="assets/images/onsite-4.webp" alt="">
 
             </div>
             <div class="burak__onsite-img-card">
-                <img src="assets/images/onsite-5.png" alt="">
+                <img src="assets/images/onsite-5.webp" alt="">
 
             </div>
             <div class="burak__onsite-img-card">
-                <img src="assets/images/onsite-6.png" alt="">
+                <img src="assets/images/onsite-6.webp" alt="">
 
             </div>
 
@@ -348,75 +345,75 @@
             <h2 class="h2 accent-text">Some of the well-known Companies</h2>
             <div class="burak__brand-clients-cards m-t-20">
                 <div class="burak__brand-clients-card-img">
-                    <img src="/assets/images/client1.png" class="client-img" alt="">
+                    <img src="/assets/images/client1.webp" class="client-img" alt="">
 
                 </div>
                 <div class="burak__brand-clients-card-img">
-                    <img src="/assets/images/client2.png" class="client-img" alt="">
+                    <img src="/assets/images/client2.webp" class="client-img" alt="">
 
                 </div>
                 <div class="burak__brand-clients-card-img">
-                    <img src="/assets/images/client3.png" class="client-img" alt="">
+                    <img src="/assets/images/client3.webp" class="client-img" alt="">
 
                 </div>
                 <div class="burak__brand-clients-card-img">
-                    <img src="/assets/images/client4.png" class="client-img" alt="">
+                    <img src="/assets/images/client4.webp" class="client-img" alt="">
 
                 </div>
                 <div class="burak__brand-clients-card-img">
-                    <img src="/assets/images/client5.png" class="client-img" alt="">
+                    <img src="/assets/images/client5.webp" class="client-img" alt="">
 
                 </div>
                 <div class="burak__brand-clients-card-img">
-                    <img src="/assets/images/client6.png" class="client-img" alt="">
+                    <img src="/assets/images/client6.webp" class="client-img" alt="">
 
                 </div>
                 <div class="burak__brand-clients-card-img">
-                    <img src="/assets/images/client7.png" class="client-img" alt="">
+                    <img src="/assets/images/client7.webp" class="client-img" alt="">
 
                 </div>
                 <div class="burak__brand-clients-card-img">
-                    <img src="/assets/images/client8.png" class="client-img" alt="">
+                    <img src="/assets/images/client8.webp" class="client-img" alt="">
 
                 </div>
                 <div class="burak__brand-clients-card-img">
-                    <img src="/assets/images/client9.png" class="client-img" alt="">
+                    <img src="/assets/images/client9.webp" class="client-img" alt="">
 
                 </div>
                 <div class="burak__brand-clients-card-img">
-                    <img src="/assets/images/client10.png" class="client-img" alt="">
+                    <img src="/assets/images/client10.webp" class="client-img" alt="">
 
                 </div>
                 <div class="burak__brand-clients-card-img">
-                    <img src="/assets/images/client11.png" class="client-img" alt="">
+                    <img src="/assets/images/client11.webp" class="client-img" alt="">
 
                 </div>
                 <div class="burak__brand-clients-card-img">
-                    <img src="/assets/images/client12.png" class="client-img" alt="">
+                    <img src="/assets/images/client12.webp" class="client-img" alt="">
 
                 </div>
                 <div class="burak__brand-clients-card-img">
-                    <img src="/assets/images/client13.png" class="client-img" alt="">
+                    <img src="/assets/images/client13.webp" class="client-img" alt="">
 
                 </div>
                 <div class="burak__brand-clients-card-img">
-                    <img src="/assets/images/client14.png" class="client-img" alt="">
+                    <img src="/assets/images/client14.webp" class="client-img" alt="">
 
                 </div>
                 <div class="burak__brand-clients-card-img">
-                    <img src="/assets/images/client15.png" class="client-img" alt="">
+                    <img src="/assets/images/client15.webp" class="client-img" alt="">
 
                 </div>
                 <div class="burak__brand-clients-card-img">
-                    <img src="/assets/images/client16.png" class="client-img" alt="">
+                    <img src="/assets/images/client16.webp" class="client-img" alt="">
 
                 </div>
                 <div class="burak__brand-clients-card-img">
-                    <img src="/assets/images/client17.png" class="client-img" alt="">
+                    <img src="/assets/images/client17.webp" class="client-img" alt="">
 
                 </div>
                 <div class="burak__brand-clients-card-img">
-                    <img src="/assets/images/client18.png" class="client-img" alt="">
+                    <img src="/assets/images/client18.webp" class="client-img" alt="">
 
                 </div>
             </div>
@@ -528,7 +525,7 @@
         <div class="burak__people-behind-grid burak-container">
             <div class="burak__people-behind-content">
                 <h2 class="h2 accent-text">PEOPLE BEHIND MEASUREMENT</h2>
-                <p class="p">In the realm of Flow Measurement, we cover a spectrum of technologies, from Electromagnetic
+                <p class="p p-t-10">In the realm of Flow Measurement, we cover a spectrum of technologies, from Electromagnetic
                     and Ultrasonic to Vortex, Thermal Mass, and Turbine Flow Meters. These solutions are meticulously
                     crafted to leverage state-of-the-art technology, along with inhouse liquid and gas calibration lab
                     complemented by a suite of calibration and validation services, ensuring the delivery of accurate
@@ -546,7 +543,7 @@
         <h2 class="h2 accent-text">The Leadership</h2>
         <div class="burak__leadership-cards m-t-20">
             <div class="burak__leadership-card ">
-                <img src="/assets/images/saeed.png" alt="">
+                <img src="/assets/images/saeed.webp" alt="">
                 <div class="burak__leadership-card-content">
                     <h5 class="h6 accent-text">Saeed Lanjekar</h5>
                     <span>Eng. | Founder | Director | CEO</span> 
@@ -558,7 +555,7 @@
 
             </div>
             <div class="burak__leadership-card ">
-                <img src="/assets/images/sajid.png" alt="">
+                <img src="/assets/images/sajid.webp" alt="">
                 <div class="burak__leadership-card-content">
                     <h5 class="h6 accent-text">Sajid Sayyed</h5>
                     <span>Eng. | Co-Founder | Director | MD</span>
@@ -576,12 +573,12 @@
 
     <section class="burak__technology m-t-50 p-t-50 p-b-50">
         <div class="burak__technology-grid burak-container">
-            <img src="/assets/images/technology.png" class="burak__technology-img" alt="">
+            <img src="/assets/images/technology.webp" class="burak__technology-img" alt="">
 
             <div class="burak__technology-content">
-                <h2 class="h2"><span class=" accent-text">Burak’s</span> New Technology and Innovation @ Automation Expo
+                <h2 class="h2 "><span class=" accent-text">Burak’s</span> New Technology and Innovation @ Automation Expo
                     2023</h2>
-                <p class="p">At Burak Automation Expo, we're bringing together the brightest minds, innovators, and
+                <p class="p p-t-10">At Burak Automation Expo, we're bringing together the brightest minds, innovators, and
                     industry leaders to showcase the latest advancements in automation technology. </p>
                 <p class="p m-t-20">Explore our wide range of flow meters and discover the latest innovations in flow
                     measurement technology. Whether you're in industrial manufacturing, water management, or any other
@@ -595,46 +592,46 @@
     <section class="burak__gallery">
         <div class="burak__gallery-img-cards m-t-20">
             <div class="burak__gallery-img-card">
-                <img src="assets/images/on1.png" alt="">
+                <img src="assets/images/on1.webp" alt="">
 
             </div>
             <div class="burak__gallery-img-card">
-                <img src="assets/images/on2.png" alt="">
+                <img src="assets/images/on2.webp" alt="">
 
             </div>
             <div class="burak__gallery-img-card">
-                <img src="assets/images/on3.png" alt="">
+                <img src="assets/images/on3.webp" alt="">
 
             </div>
             <div class="burak__gallery-img-card">
-                <img src="assets/images/on4.png" alt="">
+                <img src="assets/images/on4.webp" alt="">
 
             </div>
             <div class="burak__gallery-img-card">
-                <img src="assets/images/on5.png" alt="">
+                <img src="assets/images/on5.webp" alt="">
 
             </div>
             <div class="burak__gallery-img-card">
-                <img src="assets/images/on6.png" alt="">
+                <img src="assets/images/on6.webp" alt="">
 
             </div>
             <div class="burak__gallery-img-card">
-                <img src="assets/images/gallery-7.png" alt="">
-
-            </div>
-
-            <div class="burak__gallery-img-card">
-                <img src="assets/images/gallery-8.png" alt="">
+                <img src="assets/images/gallery-7.webp" alt="">
 
             </div>
 
             <div class="burak__gallery-img-card">
-                <img src="assets/images/gallery-9.png" alt="">
+                <img src="assets/images/gallery-8.webp" alt="">
 
             </div>
 
             <div class="burak__gallery-img-card">
-                <img src="assets/images/gallery-10.png" alt="">
+                <img src="assets/images/gallery-9.webp" alt="">
+
+            </div>
+
+            <div class="burak__gallery-img-card">
+                <img src="assets/images/gallery-10.webp" alt="">
 
             </div>
 
@@ -650,7 +647,7 @@
     <!-- Footer Start -->
     <footer class="burak__footer p-b-50">
         <div class="burak__footer-logo burak-container p-t-50 ">
-            <img src="/assets/images/burak-logo.png" class="p-b-20" alt="">
+            <img src="/assets/images/burak-logo.webp" class="p-b-20" alt="">
             <hr>
         </div>
         <div class="burak__footer-content burak-container p-t-50">
@@ -661,13 +658,13 @@
                         Shilphata Mumbra Thane 400612</p>
                     <div class="phone">
                         <a class="phone" target="_blank" href="mailto:sales@burak.in">
-                        <img src="/assets/images/email-footer.png" alt="">
+                        <img src="/assets/images/email-footer.webp" alt="">
                         <p class="p">sales@burak.in </p>
                         </a>
                     </div>
                     <div class="phone">
                         <a class="phone" target="_blank" href="tel:8655587403">
-                        <img src="/assets/images/phone-footer.png" alt="">
+                        <img src="/assets/images/phone-footer.webp" alt="">
                         <p class="p">+91 9773141989 | +91 8655587403</p>
                     </a>
                     </div>
@@ -675,19 +672,19 @@
                 </div>
                 <div class="burak__footer-social-icons">
                     <a href="https://www.facebook.com/">
-                    <img src="assets/images/facebook.png" alt="">
+                    <img src="assets/images/facebook.webp" alt="">
                 </a>
                 <a href="https://twitter.com/">
-                    <img src="assets/images/twitter.png" alt="">
+                    <img src="assets/images/twitter.webp" alt="">
                 </a>
                 <a href="https://in.linkedin.com/">
-                    <img src="assets/images/linkedin.png" alt="">
+                    <img src="assets/images/linkedin.webp" alt="">
                 </a>
                 <a href="https://www.youtube.com/">
-                    <img src="assets/images/youtube.png" alt="">
+                    <img src="assets/images/youtube.webp" alt="">
                 </a>
                 <a href="https://www.instagram.com/">
-                    <img src="assets/images/instagram.png" alt="">
+                    <img src="assets/images/instagram.webp" alt="">
                 </a>
                 </div>
             </div>
@@ -710,19 +707,19 @@
 
     <div id="mySidenav">
         <a class="contact-shortcut__phone" target="_blank" href="tel:8655587403" id="phone"><span>Phone</span>
-          <img width="38" height="38" src="/assets/images/new-phone.png" class="phone-banner__img" loading="eager" alt="Phone" />
+          <img width="38" height="38" src="/assets/images/new-phone.webp" class="phone-banner__img" loading="eager" alt="Phone" />
           
         </a>
       
-        <a class="show-dialog" id="getQuoteModal"><span>Email</span><img width="35" height="35" src="/assets/images//new-email.png" class="email-banner__img" loading="eager" alt="Email" /></a>
+        <a class="show-dialog" id="getQuoteModal"><span>Email</span><img width="35" height="35" src="/assets/images//new-email.webp" class="email-banner__img" loading="eager" alt="Email" /></a>
       
         <a class="contact-shortcut__whatsapp" target="_blank" href="https://wa.me/9137379625" id="whatsapp"><span>WhatsApp</span>
-          <img width="40" height="40" src="/assets/images//new-whatsapp.png" loading="eager" alt="Whatsapp" />
+          <img width="40" height="40" src="/assets/images//new-whatsapp.webp" loading="eager" alt="Whatsapp" />
           
         </a>
       
         <a class="contact-shortcut__email" target="_blank" href="mailto:sales@burak.in" id="modalEmail"><span>Email</span>
-          <img width="35" height="35" src="/assets/images//new-email.png" class="email-banner__img" loading="eager" alt="Email" />
+          <img width="35" height="35" src="/assets/images//new-email.webp" class="email-banner__img" loading="eager" alt="Email" />
           
         </a>
       </div>
@@ -745,18 +742,25 @@
     <script>
         var closeSvg = document.querySelector('.get-quote-modal svg');
         var form = document.querySelector('.sideQuoteForm');
+        var modal = document.querySelector('.get-quote-modal');
+        
         function showForm() {
             form.classList.add('form-visible');
             closeSvg.classList.add('rotate');
         }
-        function hideForm(event) {
-            var targetElement = event.target;
-            if (!form.contains(targetElement) && targetElement !== document.querySelector('.get-quote-modal')) {
-                form.classList.remove('form-visible');
-                closeSvg.classList.remove('rotate');
-            }
+        
+        function hideForm() {
+            form.classList.remove('form-visible');
+            closeSvg.classList.remove('rotate');
         }
-        document.addEventListener('click', hideForm);
+    
+        // Add event listener to modal to close form
+        modal.addEventListener('click', hideForm);
+    
+        // Prevent form from closing when clicking on closeSvg
+        closeSvg.addEventListener('click', function(event) {
+            event.stopPropagation(); // Prevent the click event from propagating to the modal
+        });
     </script>
 
 <script>
