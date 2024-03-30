@@ -735,6 +735,43 @@ padding: 50px 0px;
 
 /* banner edn */
 
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  display: block;
+  margin: 12% auto;
+  width: 100%;
+  max-width: 700px;
+  max-height: 100%;
+}
+
+.close {
+  color: #fff;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.swiper-wrapper {
+  -webkit-transition-timing-function:linear!important; 
+  -o-transition-timing-function:linear!important;
+  transition-timing-function:linear!important; 
+}
+
 /* description start */
 
 .burak__landingpage-desc {
@@ -922,7 +959,7 @@ height: 55px;
 }
 .burak__product-form{
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(5,1fr);
   gap: 10px;
 }
 .burak__product-form input{
@@ -945,10 +982,9 @@ height: 55px;
 .burak__get-quote-btn{
   color: var(--white);
     background-color: #4CB151;
-    padding: 10px 0px;
     text-align: center;
     align-self: start;
-    padding: 10px 30px;
+    padding: 12px 30px;
     font-size: 18px;
 }
 .burak__product-form input::placeholder{
@@ -956,9 +992,9 @@ height: 55px;
 }
 .burak__get-quote{
   background-color: var(--white);
-  padding:10px 30px;
-  align-self: start;
+  padding:12px 30px;
   font-size: 18px;
+  text-align: center;
 }
 .burak__product__content{
   display: flex;
@@ -1097,6 +1133,9 @@ height: 55px;
   display: grid;
   grid-template-columns: 1fr;
   gap: 5px;
+  justify-self: end;
+  width: 75%;
+
 }
 .input-2{
   grid-column: 1/2;
@@ -1328,6 +1367,11 @@ width: 250px;
 .burak__footer-form {
   background-color: var(--white);
   padding: 20px 10px 30px 10px;
+  width: 100%;
+
+}
+.modal-content {
+margin-top:80% ;
 }
 .burak__applications-card img{
   width: 120px;
@@ -1490,7 +1534,11 @@ nav{
 .burak__footer-form {
   background-color: var(--white);
   padding: 20px 10px 30px 10px;
+  width: 100%;
 }
+.modal-content {
+  margin-top:70% ;
+  }
 .burak__applications-card img{
   width: 100%;
   object-fit: cover;
@@ -1651,7 +1699,11 @@ nav{
 .burak__footer-form {
   background-color: var(--white);
   padding: 20px 30px 30px 30px;
+  width: 100%;
 }
+.modal-content {
+  margin-top:30% ;
+  }
 .burak__onsite-img-card img {
   width: 100%;
   object-fit: cover;
@@ -1804,12 +1856,16 @@ nav{
 .burak__footer-form {
   background-color: var(--white);
   padding: 20px 30px 30px 30px;
+  width: 100%;
 }
 .burak__onsite-img-card img {
   width: 100%;
   object-fit: cover;
   height: 200px;
 }
+.modal-content {
+  margin-top:20% ;
+  }
 }
 
 @media (min-width: 1024px) and (max-width: 1279px){
@@ -1946,6 +2002,7 @@ nav{
 .burak__footer-form {
   background-color: var(--white);
   padding: 20px 10px 30px 10px;
+  width: 100%;
 }
 .burak__onsite-img-card img {
   width: 100%;
@@ -2095,6 +2152,12 @@ nav{
 @media (min-width: 1440px) and (max-width: 1700px) {
   .article__img {
     width: 50%;
+  }
+  .burak__footer-form {
+    width: 80%;
+  }
+  .burak__banner-content {
+    gap: 100px;
   }
   .burak__onsite-img-cards {
     display: grid;

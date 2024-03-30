@@ -17,60 +17,66 @@
 
 <body>
     <nav class="burak-container m-t-20 m-b-20">
-        <img src="/assets/images/nav-logo.webp" alt="">
+        <a href="https://www.burak.in/" target="_blank">
+            <img src="/assets/images/nav-logo.webp" alt=""></a>
         <div class="burak__nav-info">
             <div class="phone">
                 <a class="phone" href="tel:9773141989">
-                
-                <img src="/assets/images/phone.webp" />
-                <p class="p accent-text"> Call: +91 9773141989 </p> </a>
+
+                    <img src="/assets/images/phone.webp" />
+                    <p class="p accent-text"> Call: +91 9773141989 </p>
+                </a>
                 <a href="tel:8655587403" class="phone">
-                <p class="p accent-text">| +91 8655587403</p></a>
-            
+                    <p class="p accent-text">| +91 8655587403</p>
+                </a>
+
             </div>
             <div class="phone">
-                <a class="phone"  href="mailto:sales@burak.in">
-                <img src="/assets/images/email.webp" alt="">
-                <p class="p accent-text">Email: sales@burak.in</p></a>
+                <a class="phone" href="mailto:sales@burak.in">
+                    <img src="/assets/images/email.webp" alt="">
+                    <p class="p accent-text">Email: sales@burak.in</p>
+                </a>
             </div>
         </div>
 
     </nav>
 
     <section class="burak__banner p-b-50">
-      
+
 
         <div class="sideQuoteForm">
             <div class="form-relative">
-            <span class="get-quote-modal" onmouseenter="showForm()">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12" fill="none">
-                    <path d="M9.71313 12L19.4263 2.28687L17.1426 0L9.71313 7.43434L2.28525 0L0 2.28525L9.71313 12Z"
-                    fill="var(--white)" transform="rotate(180 9.71313 6)" />
-                </svg>
-                <p>Get Quote</p> 
-            </span>
-              <form action="{% url 'burakapp:message' %}" method="post" id="sideQuoteForm"
-                 onsubmit="handleFormSubmit(event, 'sideQuoteForm')">
-                  <p>Get Quote</p>
-                  <input name="name" type="text" placeholder="Name" required maxlength="50"
-                      oninput="this.value=this.value.replace(/[^a-zA-Z\s]/g,'')" onblur="validateName('sideQuoteForm')">
-                  <span id="nameError" class="error-message"></span>
-          
-                  <input name="email" type="email" placeholder="Email" required onblur="validateEmail('sideQuoteForm')">
-                  <span id="emailError" class="error-message"></span>
-          
-                  <input name="phone" type="tel" placeholder="Phone" required name="phone" maxlength="12"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'')" onblur="validatePhone('sideQuoteForm')">
-                  <span id="phoneError" class="error-message"></span>
-        
-                  <textarea id="textarea" name="message" placeholder="Message"></textarea>
-                  
-                  <button type="submit" class="submit-btn">Submit</button>
-                  
-              </form>
+                <span class="get-quote-modal" onmouseenter="showForm()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12" fill="none">
+                        <path d="M9.71313 12L19.4263 2.28687L17.1426 0L9.71313 7.43434L2.28525 0L0 2.28525L9.71313 12Z"
+                            fill="var(--white)" transform="rotate(180 9.71313 6)" />
+                    </svg>
+                    <p>Get Quote</p>
+                </span>
+                <form action="{% url 'burakapp:message' %}" method="post" id="sideQuoteForm"
+                    onsubmit="handleFormSubmit(event, 'sideQuoteForm')">
+                    <p>Get Quote</p>
+                    <input name="name" type="text" placeholder="Name" required maxlength="50"
+                        oninput="this.value=this.value.replace(/[^a-zA-Z\s]/g,'')"
+                        onblur="validateName('sideQuoteForm')">
+                    <span id="nameError" class="error-message"></span>
+
+                    <input name="email" type="email" placeholder="Email" required
+                        onblur="validateEmail('sideQuoteForm')">
+                    <span id="emailError" class="error-message"></span>
+
+                    <input name="phone" type="tel" placeholder="Phone" required name="phone" maxlength="12"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'')" onblur="validatePhone('sideQuoteForm')">
+                    <span id="phoneError" class="error-message"></span>
+
+                    <textarea id="textarea" name="message" placeholder="Message"></textarea>
+
+                    <button type="submit" class="submit-btn">Submit</button>
+
+                </form>
             </div>
-          </div>
-          
+        </div>
+
 
         <div class="burak__banner-content burak-container p-t-50">
 
@@ -160,7 +166,7 @@
     <section class="burak__article p-t-50 p-b-50 m-t-50">
         <div class="burak__article-content burak-container">
             <div class="burak__article-text ">
-               
+
                 <h2 class="h2 accent-text">Air is free, but compressed air is not..!</h2>
                 <p class="p">Compressed air has the wide range of applications across Industrial segments. Compressed
                     air is considered to be the “fourth utility” after water, natural gas, and electricity. When
@@ -297,44 +303,42 @@
         <div class="burak__product__content burak-container">
             <h2 class="h2 secondary">Have Specific Product Requirements ?</h2>
             <form action="" class="burak__product-form ">
-                <input type="text" placeholder="Name" class="burak__product-form-input"><input type="text" placeholder="Email" class="burak__product-form-input"><input type="text"
-                    placeholder="Phone" class="burak__product-form-input"><input type="text" placeholder="Requirement" class="burak__product-form-input">
+                <input type="text" placeholder="Name" class="burak__product-form-input"><input type="text"
+                    placeholder="Email" class="burak__product-form-input"><input type="text" placeholder="Phone"
+                    class="burak__product-form-input"><input type="text" placeholder="Requirement"
+                    class="burak__product-form-input">
+                <a href="#" class="burak__get-quote-btn">Get Quote</a>
             </form>
-            <a href="#" class="burak__get-quote-btn">Get Quote</a>
+
         </div>
     </section>
+
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
 
     <section class="burak__onsite burak-container m-t-50">
         <h2 class="h2">On-Site Installations: Gas Flow Meters in Action</h2>
         <div class="burak__onsite-img-cards m-t-20">
             <div class="burak__onsite-img-card">
-                <img src="assets/images/onsite-1.webp" alt="">
-
+                <img src="assets/images/onsite-1.webp" alt="" onclick="openModal('assets/images/onsite-1.webp')">
             </div>
             <div class="burak__onsite-img-card">
-                <img src="assets/images/onsite-2.webp" alt="">
-
+                <img src="assets/images/onsite-2.webp" alt="" onclick="openModal('assets/images/onsite-2.webp')">
             </div>
             <div class="burak__onsite-img-card">
-                <img src="assets/images/onsite-3.webp" alt="">
-
+                <img src="assets/images/onsite-3.webp" alt="" onclick="openModal('assets/images/onsite-3.webp')">
             </div>
             <div class="burak__onsite-img-card">
-                <img src="assets/images/onsite-4.webp" alt="">
-
+                <img src="assets/images/onsite-4.webp" alt="" onclick="openModal('assets/images/onsite-4.webp')">
             </div>
             <div class="burak__onsite-img-card">
-                <img src="assets/images/onsite-5.webp" alt="">
-
+                <img src="assets/images/onsite-5.webp" alt="" onclick="openModal('assets/images/onsite-5.webp')">
             </div>
             <div class="burak__onsite-img-card">
-                <img src="assets/images/onsite-6.webp" alt="">
-
+                <img src="assets/images/onsite-6.webp" alt="" onclick="openModal('assets/images/onsite-6.webp')">
             </div>
-
-
-
-
         </div>
 
     </section>
@@ -343,79 +347,47 @@
         <div class="burak__brand-clients-content burak-container">
             <h2 class="h2 h2-fontweight">Trusted by:</h2>
             <h2 class="h2 accent-text">Some of the well-known Companies</h2>
-            <div class="burak__brand-clients-cards m-t-20">
-                <div class="burak__brand-clients-card-img">
-                    <img src="/assets/images/client1.webp" class="client-img" alt="">
-
+            <div class="swiper mySwiper1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"> <img src="/assets/images/client1.webp" class="client-img" alt="">
+                    </div>
+                    <div class="swiper-slide"> <img src="/assets/images/client2.webp" class="client-img" alt="">
+                    </div>
+                    <div class="swiper-slide"> <img src="/assets/images/client3.webp" class="client-img" alt="">
+                    </div>
+                    <div class="swiper-slide"> <img src="/assets/images/client4.webp" class="client-img" alt="">
+                    </div>
+                    <div class="swiper-slide"> <img src="/assets/images/client5.webp" class="client-img" alt="">
+                    </div>
+                    <div class="swiper-slide"> <img src="/assets/images/client6.webp" class="client-img" alt="">
+                    </div>
+                    <div class="swiper-slide"> <img src="/assets/images/client7.webp" class="client-img" alt="">
+                    </div>
+                    <div class="swiper-slide"> <img src="/assets/images/client8.webp" class="client-img" alt="">
+                    </div>
+                    <div class="swiper-slide"> <img src="/assets/images/client9.webp" class="client-img" alt="">
+                    </div>
+                    <div class="swiper-slide"> <img src="/assets/images/client10.webp" class="client-img" alt="">
+                    </div>
+                    <div class="swiper-slide"> <img src="/assets/images/client11.webp" class="client-img" alt="">
+                    </div>
+                    <div class="swiper-slide"> <img src="/assets/images/client12.webp" class="client-img" alt="">
+                    </div>
+                    <div class="swiper-slide"> <img src="/assets/images/client13.webp" class="client-img" alt="">
+                    </div>
+                    <div class="swiper-slide"> <img src="/assets/images/client14.webp" class="client-img" alt="">
+                    </div>
+                    <div class="swiper-slide"> <img src="/assets/images/client15.webp" class="client-img" alt="">
+                    </div>
+                    <div class="swiper-slide"> <img src="/assets/images/client16.webp" class="client-img" alt="">
+                    </div>
+                    <div class="swiper-slide"> <img src="/assets/images/client17.webp" class="client-img" alt="">
+                    </div>
+                    <div class="swiper-slide"> <img src="/assets/images/client18.webp" class="client-img" alt="">
+                    </div>
                 </div>
-                <div class="burak__brand-clients-card-img">
-                    <img src="/assets/images/client2.webp" class="client-img" alt="">
-
-                </div>
-                <div class="burak__brand-clients-card-img">
-                    <img src="/assets/images/client3.webp" class="client-img" alt="">
-
-                </div>
-                <div class="burak__brand-clients-card-img">
-                    <img src="/assets/images/client4.webp" class="client-img" alt="">
-
-                </div>
-                <div class="burak__brand-clients-card-img">
-                    <img src="/assets/images/client5.webp" class="client-img" alt="">
-
-                </div>
-                <div class="burak__brand-clients-card-img">
-                    <img src="/assets/images/client6.webp" class="client-img" alt="">
-
-                </div>
-                <div class="burak__brand-clients-card-img">
-                    <img src="/assets/images/client7.webp" class="client-img" alt="">
-
-                </div>
-                <div class="burak__brand-clients-card-img">
-                    <img src="/assets/images/client8.webp" class="client-img" alt="">
-
-                </div>
-                <div class="burak__brand-clients-card-img">
-                    <img src="/assets/images/client9.webp" class="client-img" alt="">
-
-                </div>
-                <div class="burak__brand-clients-card-img">
-                    <img src="/assets/images/client10.webp" class="client-img" alt="">
-
-                </div>
-                <div class="burak__brand-clients-card-img">
-                    <img src="/assets/images/client11.webp" class="client-img" alt="">
-
-                </div>
-                <div class="burak__brand-clients-card-img">
-                    <img src="/assets/images/client12.webp" class="client-img" alt="">
-
-                </div>
-                <div class="burak__brand-clients-card-img">
-                    <img src="/assets/images/client13.webp" class="client-img" alt="">
-
-                </div>
-                <div class="burak__brand-clients-card-img">
-                    <img src="/assets/images/client14.webp" class="client-img" alt="">
-
-                </div>
-                <div class="burak__brand-clients-card-img">
-                    <img src="/assets/images/client15.webp" class="client-img" alt="">
-
-                </div>
-                <div class="burak__brand-clients-card-img">
-                    <img src="/assets/images/client16.webp" class="client-img" alt="">
-
-                </div>
-                <div class="burak__brand-clients-card-img">
-                    <img src="/assets/images/client17.webp" class="client-img" alt="">
-
-                </div>
-                <div class="burak__brand-clients-card-img">
-                    <img src="/assets/images/client18.webp" class="client-img" alt="">
-
-                </div>
+                <!-- <div class="swiper-button-next" style="width: 50px; height: 10px;"></div>
+                <div class="swiper-button-prev"></div> -->
             </div>
 
 
@@ -502,8 +474,9 @@
             <form action="" class="burak__product-form ">
                 <input type="text" placeholder="Name"><input type="text" placeholder="Email"><input type="text"
                     placeholder="Phone"><input type="text" placeholder="Requirement">
+                <a href="#" class="burak__get-quote accent-text">Get Quote</a>
+
             </form>
-            <a href="#" class="burak__get-quote accent-text">Get Quote</a>
         </div>
     </section>
 
@@ -512,16 +485,19 @@
         <div class="burak__people-behind-grid burak-container">
             <div class="burak__people-behind-content">
                 <h2 class="h2 accent-text">PEOPLE BEHIND MEASUREMENT</h2>
-                <p class="p p-t-10">In the realm of Flow Measurement, we cover a spectrum of technologies, from Electromagnetic
+                <p class="p p-t-10">In the realm of Flow Measurement, we cover a spectrum of technologies, from
+                    Electromagnetic
                     and Ultrasonic to Vortex, Thermal Mass, and Turbine Flow Meters. These solutions are meticulously
                     crafted to leverage state-of-the-art technology, along with inhouse liquid and gas calibration lab
                     complemented by a suite of calibration and validation services, ensuring the delivery of accurate
                     and reliable results across various industries.</p>
 
             </div>
-                <video id="corporate-video" class="burak__people-img" muted playsinline loop>
-                    <source src="" >
-                  </video>
+            <iframe id="player1" width="100%" height="380"
+            src="https://www.youtube.com/embed/G-9kb-Xtcoc?si=T-QGpC3VMlsmj_kn&mute=1&autoplay=1" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
 
     </section>
@@ -533,7 +509,7 @@
                 <img src="/assets/images/saeed.webp" alt="">
                 <div class="burak__leadership-card-content">
                     <h5 class="h6 accent-text">Saeed Lanjekar</h5>
-                    <span>Eng. | Founder | Director | CEO</span> 
+                    <span>Eng. | Founder | Director | CEO</span>
                     <p class="p">Visionary Incubator, Innovator, Engineer, Investor, Philanthropist, and a Serial
                         Entrepreneur Mr. Saeed Lanjekar</p>
 
@@ -560,13 +536,19 @@
 
     <section class="burak__technology m-t-50 p-t-50 p-b-50">
         <div class="burak__technology-grid burak-container">
-            <!-- <img src="/assets/images/technology.webp" class="burak__technology-img" alt=""> -->
-            <iframe width="100%" height="380px" class="burak__technology-img" src="https://www.youtube.com/embed/axOYAcf_3tg?si=PSLwdxsTgusNAyWk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe id="player2" width="100%" height="380px" class="burak__technology-img"
+        src="https://www.youtube.com/embed/axOYAcf_3tg?si=PSLwdxsTgusNAyWk&mute=1&autoplay=1" title="YouTube video player"
+        frameborder="0" allow="autoplay; encrypted-media" referrerpolicy="no-referrer-when-downgrade"
+        allowfullscreen></iframe>
+
+
 
             <div class="burak__technology-content">
-                <h2 class="h2 "><span class=" accent-text">Burak’s</span> New Technology and Innovation @ Automation Expo
+                <h2 class="h2 "><span class=" accent-text">Burak’s</span> New Technology and Innovation @ Automation
+                    Expo
                     2023</h2>
-                <p class="p p-t-10">At Burak Automation Expo, we're bringing together the brightest minds, innovators, and
+                <p class="p p-t-10">At <a href="https://www.burak.in/" class="secondary">Burak</a>  Automation Expo, we're bringing together the brightest minds, innovators,
+                    and
                     industry leaders to showcase the latest advancements in automation technology. </p>
                 <p class="p m-t-20">Explore our wide range of flow meters and discover the latest innovations in flow
                     measurement technology. Whether you're in industrial manufacturing, water management, or any other
@@ -580,46 +562,46 @@
     <section class="burak__gallery">
         <div class="burak__gallery-img-cards m-t-20">
             <div class="burak__gallery-img-card">
-                <img src="assets/images/on1.webp" alt="">
+                <img src="assets/images/on1.webp" alt="" onclick="openModal('assets/images/on1.webp')">
 
             </div>
             <div class="burak__gallery-img-card">
-                <img src="assets/images/on2.webp" alt="">
+                <img src="assets/images/on2.webp" alt="" onclick="openModal('assets/images/on2.webp')">
 
             </div>
             <div class="burak__gallery-img-card">
-                <img src="assets/images/on3.webp" alt="">
+                <img src="assets/images/on3.webp" alt="" onclick="openModal('assets/images/on3.webp')">
 
             </div>
             <div class="burak__gallery-img-card">
-                <img src="assets/images/on4.webp" alt="">
+                <img src="assets/images/on4.webp" alt="" onclick="openModal('assets/images/on4.webp')">
 
             </div>
             <div class="burak__gallery-img-card">
-                <img src="assets/images/on5.webp" alt="">
+                <img src="assets/images/on5.webp" alt="" onclick="openModal('assets/images/on5.webp')">
 
             </div>
             <div class="burak__gallery-img-card">
-                <img src="assets/images/on6.webp" alt="">
+                <img src="assets/images/on6.webp" alt="" onclick="openModal('assets/images/on6.webp')">
 
             </div>
             <div class="burak__gallery-img-card">
-                <img src="assets/images/gallery-7.webp" alt="">
-
-            </div>
-
-            <div class="burak__gallery-img-card">
-                <img src="assets/images/gallery-8.webp" alt="">
+                <img src="assets/images/gallery-7.webp" alt="" onclick="openModal('assets/images/gallery-7.webp')">
 
             </div>
 
             <div class="burak__gallery-img-card">
-                <img src="assets/images/gallery-9.webp" alt="">
+                <img src="assets/images/gallery-8.webp" alt="" onclick="openModal('assets/images/gallery-8.webp')">
 
             </div>
 
             <div class="burak__gallery-img-card">
-                <img src="assets/images/gallery-10.webp" alt="">
+                <img src="assets/images/gallery-9.webp" alt="" onclick="openModal('assets/images/gallery-9.webp')">
+
+            </div>
+
+            <div class="burak__gallery-img-card">
+                <img src="assets/images/gallery-10.webp" alt="" onclick="openModal('assets/images/gallery-10.webp')">
 
             </div>
 
@@ -635,7 +617,9 @@
     <!-- Footer Start -->
     <footer class="burak__footer p-b-50">
         <div class="burak__footer-logo burak-container p-t-50 ">
-            <img src="/assets/images/burak-logo.webp" class="p-b-20" alt="">
+            <a href="https://www.burak.in/" target="_blank">
+                <img src="/assets/images/burak-logo.webp" class="p-b-20" alt="">
+            </a>
             <hr>
         </div>
         <div class="burak__footer-content burak-container p-t-50">
@@ -646,36 +630,38 @@
                         Shilphata Mumbra Thane 400612</p>
                     <div class="phone">
                         <a class="phone" href="mailto:sales@burak.in">
-                        <img src="/assets/images/email-footer.webp" alt="">
-                        <p class="p">sales@burak.in </p>
+                            <img src="/assets/images/email-footer.webp" alt="">
+                            <p class="p">sales@burak.in </p>
                         </a>
                     </div>
                     <div class="phone">
                         <a class="phone" href="tel:9773141989">
-                        <img src="/assets/images/phone-footer.webp" alt="">
-                        <p class="p">+91 9773141989 </p></a>
-                        <a class="phone" href="tel:8655587403" >
-                        <p class="p">| +91 8655587403</p></a>
-                    
+                            <img src="/assets/images/phone-footer.webp" alt="">
+                            <p class="p">+91 9773141989 </p>
+                        </a>
+                        <a class="phone" href="tel:8655587403">
+                            <p class="p">| +91 8655587403</p>
+                        </a>
+
                     </div>
 
                 </div>
                 <div class="burak__footer-social-icons">
                     <a href="https://www.facebook.com/" target="_blank">
-                    <img src="assets/images/facebook.webp" alt="">
-                </a>
-                <a href="https://twitter.com/" target="_blank">
-                    <img src="assets/images/twitter.webp" alt="">
-                </a>
-                <a href="https://in.linkedin.com/" target="_blank">
-                    <img src="assets/images/linkedin.webp" alt="">
-                </a>
-                <a href="https://www.youtube.com/" target="_blank">
-                    <img src="assets/images/youtube.webp" alt="">
-                </a>
-                <a href="https://www.instagram.com/" target="_blank">
-                    <img src="assets/images/instagram.webp" alt="">
-                </a>
+                        <img src="assets/images/facebook.webp" alt="">
+                    </a>
+                    <a href="https://twitter.com/" target="_blank">
+                        <img src="assets/images/twitter.webp" alt="">
+                    </a>
+                    <a href="https://in.linkedin.com/" target="_blank">
+                        <img src="assets/images/linkedin.webp" alt="">
+                    </a>
+                    <a href="https://www.youtube.com/" target="_blank">
+                        <img src="assets/images/youtube.webp" alt="">
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <img src="assets/images/instagram.webp" alt="">
+                    </a>
                 </div>
             </div>
             <form action="" class="burak__footer-form">
@@ -692,35 +678,39 @@
     <section class="foot burak-container m-t-20 m-b-20">
         <h2>© 2024 BURAK METERING PVT. LTD. - All Rights Reserved
         </h2>
-        <p>Developed by <span class="accent-text">Sovorun</span>  </p>
+        <p>Developed by <span class="accent-text">Sovorun</span> </p>
     </section>
 
     <div id="mySidenav">
         <a class="contact-shortcut__phone" href="tel:8655587403" id="phone"><span>Phone</span>
-          <img width="38" height="38" src="/assets/images/new-phone.webp" class="phone-banner__img" loading="eager" alt="Phone" />
-          
+            <img width="38" height="38" src="/assets/images/new-phone.webp" class="phone-banner__img" loading="eager"
+                alt="Phone" />
+
         </a>
-      
-        <a class="show-dialog" id="getQuoteModal"><span>Email</span><img width="35" height="35" src="/assets/images/new-email.webp" class="email-banner__img" loading="eager" alt="Email" /></a>
-      
-        <a class="contact-shortcut__whatsapp" target="_blank" href="https://wa.me/9773141989" id="whatsapp"><span>WhatsApp</span>
-          <img width="40" height="40" src="/assets/images/new-whatsapp.webp" loading="eager" alt="Whatsapp" />
-          
+
+        <a class="show-dialog" id="getQuoteModal"><span>Email</span><img width="35" height="35"
+                src="/assets/images/new-email.webp" class="email-banner__img" loading="eager" alt="Email" /></a>
+
+        <a class="contact-shortcut__whatsapp" target="_blank" href="https://wa.me/9773141989"
+            id="whatsapp"><span>WhatsApp</span>
+            <img width="40" height="40" src="/assets/images/new-whatsapp.webp" loading="eager" alt="Whatsapp" />
+
         </a>
-      
+
         <a class="contact-shortcut__email" href="mailto:sales@burak.in" id="modalEmail"><span>Email</span>
-          <img width="35" height="35" src="/assets/images/new-email.webp" class="email-banner__img" loading="eager" alt="Email" />
-          
+            <img width="35" height="35" src="/assets/images/new-email.webp" class="email-banner__img" loading="eager"
+                alt="Email" />
+
         </a>
-      </div>
+    </div>
 
 
-      
-      
-       
-       
-      
-      
+
+
+
+
+
+
     <!-- Footer End -->
 
 
@@ -729,39 +719,132 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+
+    <script>
+        var swiper = new Swiper(".mySwiper1", {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+
+            loop: true,
+            freeMode: true,
+            grabCursor: true,
+            loop: true,
+            autoplay: {
+                delay: 0,
+                disableOnInteraction: true
+            },
+            freeMode: true,
+            speed: 2500,
+            freeModeMomentum: false,
+            breakpoints: {
+                1280: {
+                    slidesPerView: 6,
+                },
+                1023: {
+                    slidesPerView: 3,
+                },
+                767: {
+                    slidesPerView: 2,
+                },
+                577: {
+                    slidesPerView: 2,
+                },
+                0: {
+                    slidesPerView: 1,
+                },
+            },
+        });
+    </script>
+    
+
+
+
+    <script>
+        // Function to autoplay and mute the provided YouTube iframe
+        function autoplayAndMuteVideo(iframeId) {
+            var iframe = document.getElementById(iframeId);
+            
+            // Get the current src attribute
+            var src = iframe.getAttribute('src');
+    
+            // Append autoplay and mute parameters
+            src += (src.indexOf('?') === -1 ? '?' : '&') + 'autoplay=1&mute=1';
+    
+            // Set the modified src attribute
+            iframe.setAttribute('src', src);
+        }
+    
+        // Autoplay and mute the videos when the window loads
+        window.onload = function () {
+            autoplayAndMuteVideo('player1');
+            autoplayAndMuteVideo('player2');
+        };
+    </script>
+    
     <script>
         var closeSvg = document.querySelector('.get-quote-modal svg');
         var form = document.querySelector('.sideQuoteForm');
         var modal = document.querySelector('.get-quote-modal');
-        
+
         function showForm() {
             form.classList.add('form-visible');
             closeSvg.classList.add('rotate');
         }
-        
+
         function hideForm() {
             form.classList.remove('form-visible');
             closeSvg.classList.remove('rotate');
         }
-    
+
         // Add event listener to modal to close form
         modal.addEventListener('click', hideForm);
-    
+
         // Prevent form from closing when clicking on closeSvg
-        closeSvg.addEventListener('click', function(event) {
+        closeSvg.addEventListener('click', function (event) {
             event.stopPropagation(); // Prevent the click event from propagating to the modal
         });
     </script>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        var aVideo = document.getElementById('corporate-video');
+  
+    <script>
+        function openModal(imageSrc) {
+            var modal = document.getElementById("imageModal");
+            var modalImg = document.getElementById("modalImage");
+            modal.style.display = "block";
+            modalImg.src = imageSrc;
+        }
 
-        aVideo.src = "/assets/images/Burak-Video.mp4";
-        aVideo.controls = true;
-        aVideo.autoplay = true;
-    });
-</script>
+        function closeModal() {
+            var modal = document.getElementById("imageModal");
+            modal.style.display = "none";
+        }
+
+        // Close the modal when the close button is clicked
+        document.getElementsByClassName("close")[0].onclick = function () {
+            closeModal();
+        };
+
+        // Close the modal when the user clicks anywhere outside of the modal
+        window.onclick = function (event) {
+            var modal = document.getElementById("imageModal");
+            if (event.target == modal) {
+                closeModal();
+            }
+        };
+
+        // Ensure modal does not open on page load
+        window.onload = function () {
+            closeModal();
+        };
+    </script>
 
     <!-- Initialize Swiper -->
     <script>
@@ -787,22 +870,22 @@
                     prevEl: ".swiper-button-prev",
                 },
                 breakpoints: {
-                            1280: {
-                                slidesPerView: 3,
-                            },
-                            1023: {
-                                slidesPerView: 3,
-                            },
-                            767: {
-                                slidesPerView: 2,
-                            },
-                            577: {
-                                slidesPerView: 2,
-                            },
-                            0: {
-                                slidesPerView: 1,
-                            },
-                        },
+                    1280: {
+                        slidesPerView: 3,
+                    },
+                    1023: {
+                        slidesPerView: 3,
+                    },
+                    767: {
+                        slidesPerView: 2,
+                    },
+                    577: {
+                        slidesPerView: 2,
+                    },
+                    0: {
+                        slidesPerView: 1,
+                    },
+                },
             });
         });
     </script>
