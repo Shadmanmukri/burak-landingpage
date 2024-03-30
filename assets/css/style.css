@@ -738,7 +738,7 @@ padding: 50px 0px;
 .modal {
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 100;
   left: 0;
   top: 0;
   width: 100%;
@@ -747,16 +747,36 @@ padding: 50px 0px;
   background-color: rgba(0, 0, 0, 0.9);
   align-items: center;
   justify-content: center;
+  overflow-y: hidden;
 }
-
+.prev{
+  color: var(--white);
+  cursor: pointer;
+  font-size: 35px;
+}
+.next{
+  color: var(--white);
+  cursor: pointer;
+  font-size: 35px;
+}
 .modal-content {
   display: block;
   margin: 12% auto;
   width: 100%;
   max-width: 700px;
   max-height: 100%;
+  text-align: center;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
-
+.swipe{
+  display: flex;
+  gap: 30px;
+align-items: center;
+justify-content: center;
+}
 .close {
   color: #fff;
   position: absolute;
@@ -1201,6 +1221,9 @@ height: 55px;
     gap: 17px;
     color: var(--accent);
     flex-direction: column;
+}
+.phone p{
+  font-size: 13px;
 }
 
 .burak__landingpage-desc p{

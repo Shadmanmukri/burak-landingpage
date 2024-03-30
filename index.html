@@ -314,30 +314,35 @@
     </section>
 
     <div id="imageModal" class="modal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="modalImage">
-    </div>
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+          <img id="modalImage" class="modal-image" src="" alt="">
+          <div class="swipe">
+          <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+          <a class="next" onclick="changeImage(1)">&#10095;</a></div>
+        </div>
+      </div>
 
     <section class="burak__onsite burak-container m-t-50">
         <h2 class="h2">On-Site Installations: Gas Flow Meters in Action</h2>
         <div class="burak__onsite-img-cards m-t-20">
             <div class="burak__onsite-img-card">
-                <img src="assets/images/onsite-1.webp" alt="" onclick="openModal('assets/images/onsite-1.webp')">
+                <img src="assets/images/onsite-1.png" alt="" onclick="openModal('assets/images/onsite-1.png')">
             </div>
             <div class="burak__onsite-img-card">
-                <img src="assets/images/onsite-2.webp" alt="" onclick="openModal('assets/images/onsite-2.webp')">
+                <img src="assets/images/onsite-2.png" alt="" onclick="openModal('assets/images/onsite-2.png')">
             </div>
             <div class="burak__onsite-img-card">
-                <img src="assets/images/onsite-3.webp" alt="" onclick="openModal('assets/images/onsite-3.webp')">
+                <img src="assets/images/onsite-3.png" alt="" onclick="openModal('assets/images/onsite-3.png')">
             </div>
             <div class="burak__onsite-img-card">
-                <img src="assets/images/onsite-4.webp" alt="" onclick="openModal('assets/images/onsite-4.webp')">
+                <img src="assets/images/onsite-4.png" alt="" onclick="openModal('assets/images/onsite-4.png')">
             </div>
             <div class="burak__onsite-img-card">
-                <img src="assets/images/onsite-5.webp" alt="" onclick="openModal('assets/images/onsite-5.webp')">
+                <img src="assets/images/onsite-5.png" alt="" onclick="openModal('assets/images/onsite-5.png')">
             </div>
             <div class="burak__onsite-img-card">
-                <img src="assets/images/onsite-6.webp" alt="" onclick="openModal('assets/images/onsite-6.webp')">
+                <img src="assets/images/onsite-6.png" alt="" onclick="openModal('assets/images/onsite-6.png')">
             </div>
         </div>
 
@@ -494,10 +499,12 @@
 
             </div>
             <iframe id="player1" width="100%" height="380"
-            src="https://www.youtube.com/embed/G-9kb-Xtcoc?si=T-QGpC3VMlsmj_kn&mute=1&autoplay=1" title="YouTube video player"
+            src="https://www.youtube-nocookie.com/embed/G-9kb-Xtcoc?si=nc8acfnrKrHeoX5I&amp;controls=0&rel=0&mute=1&autoplay=1" title="Burak Metering - People Behind Measurement!"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+           
         </div>
 
     </section>
@@ -537,9 +544,10 @@
     <section class="burak__technology m-t-50 p-t-50 p-b-50">
         <div class="burak__technology-grid burak-container">
             <iframe id="player2" width="100%" height="380px" class="burak__technology-img"
-        src="https://www.youtube.com/embed/axOYAcf_3tg?si=PSLwdxsTgusNAyWk&mute=1&autoplay=1" title="YouTube video player"
-        frameborder="0" allow="autoplay; encrypted-media" referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.youtube-nocookie.com/embed/axOYAcf_3tg?si=v-y-lygCEy6Plwx2&amp;controls=0&rel=0&mute=1&autoplay=1" title="Automation Expo 2023 | Burak Metering Pvt Ltd | Hall No 1 Stall no L31 & L32"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"
         allowfullscreen></iframe>
+
 
 
 
@@ -562,46 +570,46 @@
     <section class="burak__gallery">
         <div class="burak__gallery-img-cards m-t-20">
             <div class="burak__gallery-img-card">
-                <img src="assets/images/on1.webp" alt="" onclick="openModal('assets/images/on1.webp')">
+                <img src="assets/images/on1.png" alt="" onclick="openModal('assets/images/on1.png')">
 
             </div>
             <div class="burak__gallery-img-card">
-                <img src="assets/images/on2.webp" alt="" onclick="openModal('assets/images/on2.webp')">
+                <img src="assets/images/on2.png" alt="" onclick="openModal('assets/images/on2.png')">
 
             </div>
             <div class="burak__gallery-img-card">
-                <img src="assets/images/on3.webp" alt="" onclick="openModal('assets/images/on3.webp')">
+                <img src="assets/images/on3.png" alt="" onclick="openModal('assets/images/on3.png')">
 
             </div>
             <div class="burak__gallery-img-card">
-                <img src="assets/images/on4.webp" alt="" onclick="openModal('assets/images/on4.webp')">
+                <img src="assets/images/on4.png" alt="" onclick="openModal('assets/images/on4.png')">
 
             </div>
             <div class="burak__gallery-img-card">
-                <img src="assets/images/on5.webp" alt="" onclick="openModal('assets/images/on5.webp')">
+                <img src="assets/images/on5.png" alt="" onclick="openModal('assets/images/on5.png')">
 
             </div>
             <div class="burak__gallery-img-card">
-                <img src="assets/images/on6.webp" alt="" onclick="openModal('assets/images/on6.webp')">
+                <img src="assets/images/on6.png" alt="" onclick="openModal('assets/images/on6.png')">
 
             </div>
             <div class="burak__gallery-img-card">
-                <img src="assets/images/gallery-7.webp" alt="" onclick="openModal('assets/images/gallery-7.webp')">
-
-            </div>
-
-            <div class="burak__gallery-img-card">
-                <img src="assets/images/gallery-8.webp" alt="" onclick="openModal('assets/images/gallery-8.webp')">
+                <img src="assets/images/gallery-7.png" alt="" onclick="openModal('assets/images/gallery-7.png')">
 
             </div>
 
             <div class="burak__gallery-img-card">
-                <img src="assets/images/gallery-9.webp" alt="" onclick="openModal('assets/images/gallery-9.webp')">
+                <img src="assets/images/gallery-8.png" alt="" onclick="openModal('assets/images/gallery-8.png')">
 
             </div>
 
             <div class="burak__gallery-img-card">
-                <img src="assets/images/gallery-10.webp" alt="" onclick="openModal('assets/images/gallery-10.webp')">
+                <img src="assets/images/gallery-9.png" alt="" onclick="openModal('assets/images/gallery-9.png')">
+
+            </div>
+
+            <div class="burak__gallery-img-card">
+                <img src="assets/images/gallery-10.png" alt="" onclick="openModal('assets/images/gallery-10.png')">
 
             </div>
 
@@ -721,48 +729,58 @@
 
 
     <script>
-        var swiper = new Swiper(".mySwiper1", {
-            slidesPerView: 3,
-            spaceBetween: 20,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-
-            loop: true,
-            freeMode: true,
-            grabCursor: true,
-            loop: true,
-            autoplay: {
-                delay: 0,
-                disableOnInteraction: true
-            },
-            freeMode: true,
-            speed: 2500,
-            freeModeMomentum: false,
-            breakpoints: {
-                1280: {
-                    slidesPerView: 6,
+        document.addEventListener("DOMContentLoaded", function () {
+            var swiper = new Swiper(".mySwiper1", {
+                slidesPerView: 3,
+                spaceBetween: 20,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
                 },
-                1023: {
-                    slidesPerView: 3,
+               
+                loop: true,
+                // freeMode: true,
+                // grabCursor: true,
+                autoplay: {
+                    delay: 0,
                 },
-                767: {
-                    slidesPerView: 2,
+                speed: 2500,
+                // freeModeMomentum: false,
+                breakpoints: {
+                    1280: {
+                        slidesPerView: 6,
+                    },
+                    1023: {
+                        slidesPerView: 3,
+                    },
+                    767: {
+                        slidesPerView: 2,
+                    },
+                    577: {
+                        slidesPerView: 2,
+                    },
+                    0: {
+                        slidesPerView: 1,
+                    },
                 },
-                577: {
-                    slidesPerView: 2,
-                },
-                0: {
-                    slidesPerView: 1,
-                },
-            },
+            });
+    
+            var swiperContainer = document.querySelector(".mySwiper1");
+    
+            swiperContainer.addEventListener("mouseenter", function () {
+                swiper.autoplay.stop();
+                console.log("clicked");
+            });
+    
+            swiperContainer.addEventListener("mouseleave", function () {
+                swiper.autoplay.start();
+                console.log("unclicked");
+            });
         });
     </script>
+    
+    
+    
     
 
 
@@ -814,37 +832,46 @@
     </script>
 
   
-    <script>
-        function openModal(imageSrc) {
-            var modal = document.getElementById("imageModal");
-            var modalImg = document.getElementById("modalImage");
-            modal.style.display = "block";
-            modalImg.src = imageSrc;
-        }
-
-        function closeModal() {
-            var modal = document.getElementById("imageModal");
-            modal.style.display = "none";
-        }
-
-        // Close the modal when the close button is clicked
-        document.getElementsByClassName("close")[0].onclick = function () {
-            closeModal();
-        };
-
-        // Close the modal when the user clicks anywhere outside of the modal
-        window.onclick = function (event) {
-            var modal = document.getElementById("imageModal");
-            if (event.target == modal) {
-                closeModal();
-            }
-        };
-
-        // Ensure modal does not open on page load
-        window.onload = function () {
-            closeModal();
-        };
-    </script>
+<script>
+    var modalIndex = 0;
+    var modalImages = [];
+  
+    function openModal(imageSrc) {
+      var modal = document.getElementById("imageModal");
+      var modalImg = document.getElementById("modalImage");
+      modal.style.display = "block";
+      modalImg.src = imageSrc;
+      modalIndex = modalImages.indexOf(imageSrc);
+    }
+  
+    function closeModal() {
+      var modal = document.getElementById("imageModal");
+      modal.style.display = "none";
+    }
+  
+    function changeImage(n) {
+      modalIndex += n;
+      if (modalIndex >= modalImages.length) {
+        modalIndex = 0;
+      }
+      if (modalIndex < 0) {
+        modalIndex = modalImages.length - 1;
+      }
+      document.getElementById("modalImage").src = modalImages[modalIndex];
+    }
+  
+    // Ensure modal does not open on page load
+    window.onload = function () {
+      closeModal();
+      // Populate modalImages array with image sources
+      var images = document.querySelectorAll('.burak__gallery-img-card img');
+      images.forEach(function (img) {
+        modalImages.push(img.src);
+      });
+    };
+  </script>
+  
+  
 
     <!-- Initialize Swiper -->
     <script>
